@@ -1,0 +1,222 @@
+/* Phone to Tablet */
+
+@media screen and (max-width: 767px)
+	.row
+		width: auto
+
+	article
+		padding-left: 0em
+
+	#top-header
+		min-width: 100%
+		max-height: 3.5em
+		z-index: 1004
+		#main-logo
+			background: none
+			width: 100%
+			min-height: 50px
+			padding: 0.2em 3em 
+			#logo-icon
+				display: none 
+			h1
+				text-align: center
+				font-weight: 300
+				font-size: 1.8em
+				letter-spacing: -0.020em
+				padding-left: 0px
+				#logo
+					color: $header-text
+			h4.subhead 
+				display: none
+		.active
+			border-color: $background
+		
+		.icon-reorder
+			font-size: 1.4em
+			font-color: $off-white
+		.button
+			margin: 0.5em
+			font-size: 1em
+			border: none
+			background-color: $base-color
+			color: $off-white
+			box-shadow: none
+			background: none
+		.button:hover
+			border: none
+			color: $off-white
+			background-color: $dark-grey
+			color: $white
+		.button:active
+			border: none
+			color: $off-white
+			background-color: $darker-grey
+			box-shadow: none
+
+	.mobile-nav-container
+		top: 3.5em
+		width: 55%
+		background-color: $mobile-nav
+		color: $off-white
+		-webkit-transition: all 0.25s ease-in 0s
+		height: 100%
+		+Remove-Box-Shadow
+		ul.tabs.vertical
+			margin-bottom: 0px
+			li
+				border: $box-border
+				+Remove-Box-Shadow
+				background: $mobile-nav
+				a
+					border-right: 0px
+					font-size: 16px
+					color: $off-white
+					background: 0 no-repeat $mobile-nav
+					+Remove-Box-Shadow
+					+Button-Transition
+				a:hover
+					background: lighten($base-color, 10%)
+					color: $white
+				a:active
+					background: $mobile-nav
+				label
+					margin: 5px 15px
+					height: 44px
+					border-top: $box-border
+					.screen-reader-text
+						clip: rect(1px,1px,1px,1px)
+						position: absolute !important
+					.search-field
+						background: $white url('images/search-icon.png') -38px 0 no-repeat
+						height: 40px
+						padding-left: 36px
+						position: relative
+						border: none
+						cursor: pointer
+					#search-submit
+						display: none
+					
+	div.orbit-wrapper
+		display: none
+		#featured
+			display: none
+			div.orbit-slide
+				display: none
+
+	#content
+		background: $mobile-nav
+		margin: 0 4px
+
+	.active #main
+		margin-right: -95%
+		border-left: $box-shadow
+	#main
+		height: 100%
+		position: relative
+		background: $background
+		z-index: 1002
+		-webkit-transition: all 0.25s ease-in 0s
+		padding: 0px
+		.home-main
+			padding-left: 5px
+			.post-image
+				img
+					margin-top: 0.8em
+					border: none
+			.post
+				h2
+					margin: 0.4em 0.3em
+					overflow: hidden
+				p
+					padding: 0 1em
+					overflow: hidden
+				.button
+					width: 100%
+					text-align: center
+
+	.page-header
+		max-height: 400px
+
+	article
+		img
+			margin-top: 0.9em
+			padding: 0 1em
+			max-height: 200px
+		h1
+			margin: 0.4em 0.3em
+		p
+			padding: 0 1em
+
+	.panel
+		display: none
+		.widget
+			display: none
+
+	.error-image
+		background: none
+		padding-top: 0em
+
+	#site-footer
+		height: 100%
+
+	.mobile-footer
+		display: block
+		text-align: center
+		min-height: 7em
+		h5
+			margin: 0.2em 0
+		.mobile-social-media-icons
+			list-style: none
+			text-decoration: none
+			display: block
+			margin-top: 1em
+			li:first-child
+				margin-left: 0em
+			li
+				margin-left: 4em
+				display: inline-block
+				a
+					color: $anchor-color
+					+Button-Transition
+				a:hover
+					color: $white
+	p.attribution
+		display: block
+		text-align: center
+		font-size: 100%
+		margin-right: 0em
+
+	#site-footer
+		display:none
+		.footer-links
+			display: none
+		.link-list
+			display:none
+		.social-media-icons
+			display: none
+
+	.search-results-header
+		padding-left: 0.7em
+
+	.post_content
+		padding-left: 0em
+
+
+/* Tablet to Screen */
+
+@media screen and (min-width:767) and (max-width: 1023)
+	#top-header
+		#main-logo
+			width: 200px
+			h1
+				font-size: 1em
+				font-weight: 100
+				line-height: 1em
+	.page-header
+		min-height: 500px
+	article
+		img
+			max-height: 400px
+
+		
+		

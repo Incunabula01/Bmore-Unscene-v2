@@ -1,0 +1,53 @@
+#site-footer
+	height: 10em
+	width: 100%
+	background-color: $base-color
+	clear: both
+
+.footer-links
+	font-size: 100%
+	ul.link-list
+		margin: 1em 0.5em
+		display: block
+		vertical-align: top
+		li
+			border-right: $box-border
+			padding: 0 1em
+			margin-left: 0em
+		li:last-child
+			border-right: 0em
+		label
+			display: none
+		a
+			color: $anchor-color
+			+Button-Transition
+		a:hover
+			color: $white
+
+ul.social-media-icons
+	list-style: none
+	text-decoration: none
+	margin: 1em 2em
+	float: right
+	li
+		margin-right: 2em
+		display: inline-block
+		margin-left: 1em
+		a
+			color: $anchor-color
+			+Button-Transition
+		a:hover
+			color: $white
+
+.mobile-footer
+	display: none
+	.mobile-social-media-icons
+		display: none
+
+.attribution
+	font-size: 0.5em
+	color: $off-white
+	background: none
+	margin-right: 4em
+	a
+		color: $off-white

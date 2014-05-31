@@ -1,0 +1,52 @@
+/*!
+ *Theme Name: Wordpress Foundation Child
+ *Theme URI: http://320press.com/wpfoundation
+ *Template: wp-foundation
+ *Description: Child of WP Foundation
+ *Version: 2.0
+ *Author: 320press
+ *Author URI: http://320press.com
+ *Tags: bones, zurb, foundation, 320press, clean, basic */
+
+@import url("../wp-foundation/stylesheets/app.css")
+@import url("../wp-foundation/style.css")
+
+@import variables
+@import mixins
+@import typography
+@import header
+@import footer
+@import homepage
+@import post
+@import sidebar
+@import Misc
+@import media-queries
+
+
+.button
+	background: $base-color
+	border: 0.1em solid $off-white
+	font-family: $caption
+	font-size: 16px
+	box-shadow: none
+
+.button:hover
+	background-color: $link-color
+
+.button:active
+	box-shadow: 0px 0px 2px $white inset
+	background-color: darken($link-color, 20%)
+
+#content
+	height: 100%
+
+.columns
+	padding: 0 4px
+
+.container
+	width:  69em
+
+.row .row
+	margin: 0em
+
+	
