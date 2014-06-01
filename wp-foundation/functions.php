@@ -36,6 +36,7 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 add_image_size( 'wpf-thumb-640', 640, 150, true );
 add_image_size( 'wpf-featured', 639, 300, true );
 add_image_size( 'wpf-home-featured', 1300, 900, true);
+add_image_size( 'wpf-gallery', 900 , 0 , true);
 add_image_size( 'bones-thumb-600', 600, 200, true );
 add_image_size( 'bones-thumb-300', 300, 150, true );
 
@@ -171,6 +172,18 @@ function wp_foundation_js(){
 }
 
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
+
+if (! function_exists('slug_scripts_masonry') ) :
+if ( ! is_admin() ) :
+
+function slug_scripts_masonry() {
+    wp_enqueue_script('masonry');
+    wp_enqueue_style('masonry’, get_template_directory_uri().'/css/’);
+}
+add_action( 'wp_enqueue_scripts', 'slug_scripts_masonry' );
+endif; //! is_admin()
+endif; //! slug_scripts_masonry exists
+
 
 /************* COMMENT LAYOUT *********************/
 		

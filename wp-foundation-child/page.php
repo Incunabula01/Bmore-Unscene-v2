@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+	if ( is_page() ) :
+		get_header( 'page' );
+	else :
+		get_header();
+	endif;
+?>
 			
 			<div id="content">
 			

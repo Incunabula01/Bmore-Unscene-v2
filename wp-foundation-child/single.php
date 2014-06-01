@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 			
 			<div id="content" class="clearfix">
 			
@@ -19,38 +19,37 @@
 							?>
 							
 							<div class="wrapper">
-
-								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-								
-								<p class="meta">
-									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
-										<?php the_time('F jS, Y'); ?>
-									</time> 
-										<?php _e("by"); ?>
-										<?php the_author_posts_link(); ?>
-								</p>
+								<div class="eight columns">
+									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+									
+									<p class="meta">
+										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
+											<?php the_time('F jS, Y'); ?>
+										</time> 
+											<?php _e("by"); ?>
+											<?php the_author_posts_link(); ?>
+									</p>
+								</div>
 								<?php get_sidebar(); // sidebar 1 ?>
 							</div>
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content eight columns">
-							<div class="wrapper">
+						<div class="wrapper">
+							<section class="post_content seven columns">
 
-									<?php the_content(); ?>
-
-							</div>
-					
-						</section> <!-- end article section -->
+										<?php the_content(); ?>
 						
+							</section> <!-- end article section -->
+						</div>
 						<footer>
 			
 							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
 							
 						</footer> <!-- end article footer -->
-						
-						<?php comments_template('bones_comments'); ?>
-
+						<div class="wrapper">
+							<?php comments_template('bones_comments'); ?>
+						</div>
 					</article> <!-- end article -->
 										
 					<?php endwhile; ?>			

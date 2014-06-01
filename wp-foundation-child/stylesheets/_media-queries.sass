@@ -10,52 +10,57 @@
 	article
 		padding-left: 0em
 
+	#top-header-page
+		background-color: $base-color
+		min-width: 100%
+		max-height: 3.5em
+
 	#top-header
 		min-width: 100%
 		max-height: 3.5em
 		background-color: $base-color
-		#main-logo
-			background: none
-			width: 100%
-			min-height: 50px
-			padding: 0.2em 3em 
-			#logo-icon
-				display: none 
-			h1
-				text-align: center
-				font-weight: 300
-				font-size: 1.8em
-				letter-spacing: -0.020em
-				padding-left: 0px
-				#logo
-					color: $header-text
-			h4.subhead 
-				display: none
-		.active
-			border-color: none
-			border: 0em
+
+	#main-logo
+		background: none
+		width: 100%
+		min-height: 50px
+		padding: 0.2em 3em 
+		#logo-icon
+			display: none 
+		h1
+			text-align: center
+			font-weight: 300
+			font-size: 1.8em
+			letter-spacing: -0.020em
+			padding-left: 0px
+			#logo
+				color: $header-text
+		h4.subhead 
+			display: none
+	.active
+		border-color: none
+		border: 0em
 		
-		.icon-reorder
-			font-size: 1.4em
-			font-color: $off-white
-		.button
-			margin: 0.5em
-			font-size: 1em
-			border: none
-			background-color: $base-color
-			color: $off-white
-			box-shadow: none
-			background: none
-		.button:hover
-			border: none
-			color: $off-white
-			background-color: $dark-grey
-			color: $white
-		.button:active
-			border: none
-			color: $off-white
-			background-color: $darker-grey
-			box-shadow: none
+	.icon-reorder
+		font-size: 1.4em
+		font-color: $off-white
+	.button
+		margin: 0.5em
+		font-size: 1em
+		border: 0rem
+		background-color: $base-color
+		color: $off-white
+		box-shadow: none
+	.button:hover
+		border: 0rem
+		color: $off-white
+		background-color: $dark-grey
+		color: $white
+	.button:active
+		border: 0rem
+		color: $off-white
+		background-color: $darker-grey
+		box-shadow: none
 
 	.mobile-nav-container
 		top: 3.6em
@@ -68,18 +73,23 @@
 		ul.tabs.vertical
 			margin-bottom: 0px
 			li:hover
-				background: lighten($base-color, 10%)
-				color: $mobile-nav
+				background: darken($darker-grey, 10%)
+				color: $white
 				+Button-Transition
+			li:first-child
+				border-top: $box-shadow
 			li:last-child
 				padding: 0em
+			li.active
+				border-top: $box-shadow
 			li
 				border: $box-border
 				border-right: 0em
+				border-left: 0em
 				+Remove-Box-Shadow
 				background: $mobile-nav
 				height: 44px
-				padding: 1em
+				padding: 1em 14em 1em 1em
 				a
 					border-right: 0px
 					font-size: 16px
@@ -89,6 +99,7 @@
 					padding: 0em
 					background: none
 					border: 0em
+					text-align: left
 				a:hover
 					+Button-Transition
 					color: $white
@@ -96,7 +107,7 @@
 					background: $mobile-nav
 				label
 					margin: 0 14px
-					height: 40px
+					height: 41px
 					border-top: $box-border
 					.screen-reader-text
 						clip: rect(1px,1px,1px,1px)
@@ -217,6 +228,9 @@
 
 	.post_content
 		padding-left: 0em
+
+	.gallery-item
+		width: 100%
 
 
 /* Tablet to Screen */
