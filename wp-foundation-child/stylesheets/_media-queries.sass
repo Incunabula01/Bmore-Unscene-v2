@@ -4,13 +4,16 @@
 	.row
 		width: auto
 
+	.wrapper
+		width: 100%
+
 	article
 		padding-left: 0em
 
 	#top-header
 		min-width: 100%
 		max-height: 3.5em
-		z-index: 1004
+		background-color: $base-color
 		#main-logo
 			background: none
 			width: 100%
@@ -29,7 +32,8 @@
 			h4.subhead 
 				display: none
 		.active
-			border-color: $background
+			border-color: none
+			border: 0em
 		
 		.icon-reorder
 			font-size: 1.4em
@@ -54,7 +58,7 @@
 			box-shadow: none
 
 	.mobile-nav-container
-		top: 3.5em
+		top: 3.6em
 		width: 55%
 		background-color: $mobile-nav
 		color: $off-white
@@ -63,25 +67,36 @@
 		+Remove-Box-Shadow
 		ul.tabs.vertical
 			margin-bottom: 0px
+			li:hover
+				background: lighten($base-color, 10%)
+				color: $mobile-nav
+				+Button-Transition
+			li:last-child
+				padding: 0em
 			li
 				border: $box-border
+				border-right: 0em
 				+Remove-Box-Shadow
 				background: $mobile-nav
+				height: 44px
+				padding: 1em
 				a
 					border-right: 0px
 					font-size: 16px
 					color: $off-white
-					background: 0 no-repeat $mobile-nav
 					+Remove-Box-Shadow
-					+Button-Transition
+					float: right
+					padding: 0em
+					background: none
+					border: 0em
 				a:hover
-					background: lighten($base-color, 10%)
+					+Button-Transition
 					color: $white
 				a:active
 					background: $mobile-nav
 				label
-					margin: 5px 15px
-					height: 44px
+					margin: 0 14px
+					height: 40px
 					border-top: $box-border
 					.screen-reader-text
 						clip: rect(1px,1px,1px,1px)
@@ -93,6 +108,7 @@
 						position: relative
 						border: none
 						cursor: pointer
+						margin: 0em
 					#search-submit
 						display: none
 					
@@ -139,6 +155,7 @@
 
 	article
 		img
+			width: 100%
 			margin-top: 0.9em
 			padding: 0 1em
 			max-height: 200px
@@ -205,6 +222,9 @@
 /* Tablet to Screen */
 
 @media screen and (min-width:767) and (max-width: 1023)
+	.wrapper
+		padding: 0 1em
+
 	#top-header
 		#main-logo
 			width: 200px

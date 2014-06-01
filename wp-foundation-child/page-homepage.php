@@ -34,11 +34,13 @@ Template Name: Homepage
 								?>
 								
 								<div style="background-size:cover; background-image: url(<?php echo $featured_src[0]; ?>);">
+									<div class="wrapper">
 										<span class="caption-container">
 											<h3><?php the_title(); ?></h3>
 												<p><?php echo excerpt(30); ?></p>
 											<p><a href="<?php the_permalink(); ?>" class="button">Read more »</a></p>
 										</span>
+									</div>
 								</div>
 								
 								<?php endforeach; ?>
@@ -51,7 +53,7 @@ Template Name: Homepage
 						<script type="text/javascript">
 						   $(window).load(function() {
 						       		$('#featured').orbit({ 
-						       		fluid: '16x6'
+						       		fluid: '16x9'
 						       });
 						   });
 						</script>
@@ -63,32 +65,32 @@ Template Name: Homepage
 						<section class="row post_content">
 						
 							<div class="home-main twelve columns">
-						
-								<?php
-								 $postslist = get_posts('numberposts=6'); /*-- Adjusts number of posts on front page */
-								 foreach ($postslist as $post) :
-								    setup_postdata($post);
-								 ?>
-									<div class="post-image six columns">
-										<a href="<?php the_permalink();?>">  
-											<?php /*--Article Thumbnails--*/
-   												if (is_mobile()) {      
-   													the_post_thumbnail('bones-thumb-640');
-   												} else {
-   													the_post_thumbnail('wpf-featured');
-   												}
-											?>
-										</a>
-										<div class="post">
-											<h2>
-												<?php the_title(); ?>
-											</h2>
-												<?php echo content(45) ?>
-											<p><a href="<?php the_permalink(); ?>" class="button right">Read more »</a></p>
+								<div class="wrapper">
+									<?php
+									 $postslist = get_posts('numberposts=6'); /*-- Adjusts number of posts on front page */
+									 foreach ($postslist as $post) :
+									    setup_postdata($post);
+									 ?>
+										<div class="post-image six columns">
+											<a href="<?php the_permalink();?>">  
+												<?php /*--Article Thumbnails--*/
+	   												if (is_mobile()) {      
+	   													the_post_thumbnail('bones-thumb-640');
+	   												} else {
+	   													the_post_thumbnail('wpf-featured');
+	   												}
+												?>
+											</a>
+											<div class="post">
+												<h2>
+													<?php the_title(); ?>
+												</h2>
+													<?php echo content(45) ?>
+												<p><a href="<?php the_permalink(); ?>" class="button right">Read more »</a></p>
+											</div>
 										</div>
-									</div>
-								<?php endforeach ?>
-								
+									<?php endforeach ?>
+								</div>
 							</div>
 								
 							

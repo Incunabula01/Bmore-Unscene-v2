@@ -348,14 +348,17 @@ function custom_wp_nav_menu($var) {
                 'first',
                 'last',
                 'vertical',
-                'horizontal'
+                'horizontal',
+                'icon-star',
+                'icon-calendar',
+                'icon-archive',
+                'icon-2x'
                 )
         ) : '';
 }
 add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
 add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
-add_filter('page_css_class', 'custom_wp_nav_menu');
- 
+add_filter('page_css_class', 'custom_wp_nav_menu'); 
 //Replaces "current-menu-item" with "active"
 function current_to_active($text){
         $replace = array(

@@ -2,7 +2,7 @@
 			
 			<div id="content" class="clearfix">
 			
-				<div id="main" class="nine columns" role="main">
+				<div id="main" class="twelve columns" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -18,21 +18,28 @@
    								}
 							?>
 							
-							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-							
-							<p class="meta">
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
-									<?php the_time('F jS, Y'); ?>
-								</time> 
-									<?php _e("by"); ?>
-									<?php the_author_posts_link(); ?>
-							</p>
+							<div class="wrapper">
+
+								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+								
+								<p class="meta">
+									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
+										<?php the_time('F jS, Y'); ?>
+									</time> 
+										<?php _e("by"); ?>
+										<?php the_author_posts_link(); ?>
+								</p>
+								<?php get_sidebar(); // sidebar 1 ?>
+							</div>
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content nine columns">
-							<?php the_content(); ?>
-							
+						<section class="post_content eight columns">
+							<div class="wrapper">
+
+									<?php the_content(); ?>
+
+							</div>
 					
 						</section> <!-- end article section -->
 						
@@ -64,8 +71,7 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
+
     
 			</div> <!-- end #content -->
 

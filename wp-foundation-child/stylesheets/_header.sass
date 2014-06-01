@@ -1,20 +1,22 @@
 
 #top-header
-  background-color: $base-color
+  background-color: rgba(140, 140, 140, 0.7)
   color: $header-text
-  max-height: 11em
+  max-height: 9em
+  z-index: 2000
+  position: relative
   #main-logo
     display: block
-    padding: 4em 0 1.5em 1.5em
+    padding: 2em 0
     #logo-icon
-      background: $base-color url('images/BmoreUnsceneLogo.png') no-repeat 
+      background: transparent url('images/BmoreUnsceneLogo.png') no-repeat 
       height: 75px
       width: 75px
       display: block
       float: left
-      +Button-Transition
     #logo-icon:hover
-      opacity: 0.8
+      opacity: 0.7
+      +Button-Transition
     h1
       font-size: 2em
       font-weight: 100
@@ -32,39 +34,47 @@
 
   .active
     background: $dark-grey
-    border-color: $base-color
+    border: 0.1em solid $off-white
   .active:hover
-    background: darken($base-color, 20%)      
+    background: darken($darker-grey, 20%)      
       
 
-ul.nav-bar
-  background: $base-color
-  margin-top: 5.5em
-  height: 2em
+.nav-bar
+  margin-top: 3.5em
+  height: 4em
+  background: transparent
+  li:last-child
+    border-right: none
+    border: none
+  li.active
+    background: darken($darker-grey, 50%)
+    border-color: none
+  li:hover
+    background: darken($darker-grey, 25%)
+  li:focus
+    background: darken($darker-grey, 50%)
   li
-    border-color: $base-color
-    border-width: 0em
-    box-shadow: none
+    padding: 0 1em
+    border: 0.1em solid $darker-grey
+    margin-right: 0.5em
+    +Remove-Box-Shadow
+    background-color: $darker-grey
     +Button-Transition
     a
-      border-left: 0.1rem solid $white
-      border-right: 0em
       color: $anchor-color
-    a:first-child
       font-size: 1.2em
-      padding: 0 15px
-    a:last-child
-      border-right: 0.1rem solid $white
-    a:last-child:hover
-      border-right: 0.1rem solid $white
+      float: right
+
+    a:first-child
+      padding: 0 0.5em
     a:hover
-      background: darken($base-color, 25%)
-    a:focus
-      background: $dark-grey
+      color: $white
+      +Button-Transition
 
     label
       margin: 0 15px
-      height: 37px
+      height: 40px
+      border: 0em
       .screen-reader-text
         clip: rect(1px,1px,1px,1px)
         position: absolute !important
@@ -78,18 +88,20 @@ ul.nav-bar
         -moz-transition: width 400ms ease, background 400ms ease
         -o-transition: width 400ms ease, background 400ms ease
         width: 0px
-        border: none
+        border: 0em
         cursor: pointer
         border-image-width: 0px
         +Remove-Box-Shadow
       .search-field:focus
         background: $white url('images/search-icon.png') -38px 0 no-repeat
         width: 150px
-        border: none
+        border: 0em
+      .search-field:hover
+        border: 0em
       #search-submit
         display: none
 
-      
+  
 
 
         

@@ -26,19 +26,17 @@
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
-					
-					<?php comments_template(); ?>
-					
+										
 					<?php endwhile; ?>		
 					
 					<?php else : ?>
 					
 					<article id="post-not-found">
 					    <header>
-					    	<h1>Not Found</h1>
+					    	<h1>Opps</h1>
 					    </header>
 					    <section class="post_content">
-					    	<p>Sorry, but the requested resource was not found on this site.</p>
+					    	<p>Sorry, the posts appear to be in a blizzard, come back soon...</p>
 					    </section>
 					    <footer>
 					    </footer>

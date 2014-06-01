@@ -20,13 +20,13 @@
 
     defaults: {
       animation: 'fade',     // fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
-      animationSpeed: 700,        // how fast animtions are
-      timer: true,            // true or false to have the timer
+      animationSpeed: 900,        // how fast animtions are
+      timer: false,            // true or false to have the timer
       advanceSpeed: 4000,         // if timer is enabled, time between transitions
       pauseOnHover: false,        // if you hover pauses the slider
       startClockOnMouseOut: false,    // if clock should start on MouseOut
       startClockOnMouseOutAfter: 1000,  // how long after MouseOut should the timer start again
-      directionalNav: false,         // manual advancing directional navs
+      directionalNav: true,         // manual advancing directional navs
       directionalNavRightText: 'Right', // text of right directional element for accessibility
       directionalNavLeftText: 'Left', // text of left directional element for accessibility
       captions: true,           // do you want captions?
@@ -45,7 +45,7 @@
     activeSlide: 0,
     numberSlides: 0,
     orbitWidth: null,
-    orbitHeight: null,
+    orbitHeight: 700,
     locked: null,
     timerRunning: null,
     degrees: 0,
