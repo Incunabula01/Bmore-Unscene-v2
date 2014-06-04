@@ -18,8 +18,11 @@
 										<br/>
 								</div>		
 								<nav class="twelve columns clearfix">
-									<div class="eight columns">
-										<?php bones_footer_links(); ?>
+									<div class="four columns">
+										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-1') ) : ?><?php endif; ?>
+									</div>
+									<div class="four columns">
+										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-2') ) : ?><?php endif; ?>
 									</div>
 									<div class="four columns">
 										<ul class="social-media-icons">
@@ -55,9 +58,12 @@
 		
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 		<script text-javascript>
-			jQuery( document ).ready( function( $ ) {
-   			 	$( '#gallery-1' ).masonry();
-			} );
+				var $container = $('#gallery-1');
+				$container.imagesLoaded( function() {
+   			 		$container.masonry({ 
+   			 			columnWidth:'.gallery-item'
+   			 		 });
+   			 	});
 		</script>
 
 	</body>

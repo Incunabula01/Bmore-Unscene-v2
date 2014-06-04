@@ -84,6 +84,23 @@ function bones_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
+    register_sidebar( array(
+        'name' => 'footer-sidebar-1',
+        'id' => 'footer1',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'footer-sidebar-2',
+        'id' => 'footer2',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ) );
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
@@ -172,6 +189,13 @@ function wp_foundation_js(){
 }
 
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
+
+function imageLoaded_js() {
+wp_register_script('imageLoaded_js', get_template_directory_uri() . '/javascripts/imagesloaded.js', 'jQuery','1.1', true);
+wp_enqueue_script('imageLoaded_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'imageLoaded_js' );  
 
 if (! function_exists('slug_scripts_masonry') ) :
 if ( ! is_admin() ) :
