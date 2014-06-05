@@ -87,7 +87,7 @@ function bones_register_sidebars() {
     register_sidebar( array(
         'name' => 'footer-sidebar-1',
         'id' => 'footer1',
-        'before_widget' => '<div>',
+        'before_widget' => '<div class="footer-menu">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
@@ -96,7 +96,7 @@ function bones_register_sidebars() {
     register_sidebar( array(
         'name' => 'footer-sidebar-2',
         'id' => 'footer2',
-        'before_widget' => '<div>',
+        'before_widget' => '<div class="footer-menu">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',

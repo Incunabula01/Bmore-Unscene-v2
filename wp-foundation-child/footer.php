@@ -16,8 +16,10 @@
 											</li>
 										</ul>
 										<br/>
+										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-1') ) : ?><?php endif; ?>
+										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-2') ) : ?><?php endif; ?>
 								</div>		
-								<nav class="twelve columns clearfix">
+								<nav class="twelve columns clearfix hide-for-small">
 									<div class="four columns">
 										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-1') ) : ?><?php endif; ?>
 									</div>
@@ -25,17 +27,20 @@
 										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-2') ) : ?><?php endif; ?>
 									</div>
 									<div class="four columns">
-										<ul class="social-media-icons">
-											<li>
-												<a href="#"><i class="icon-facebook-sign icon-2x"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="icon-twitter icon-2x"></i></a>
-											</li>
-											<li>
-												<a href="#"><i class="icon-instagram icon-2x"></i></a>
-											</li>
-										</ul>
+										<div class="footer-menu">
+											<h4 class="widgettitle"> Follow Us</h4>
+											<ul class="social-media-icons">
+												<li>
+													<a href="#"><i class="icon-facebook-sign icon-3x"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon-twitter icon-3x"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon-instagram icon-3x"></i></a>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</nav>
 								
