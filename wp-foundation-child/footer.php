@@ -40,14 +40,13 @@
 													<a href="#"><i class="icon-instagram icon-3x"></i></a>
 												</li>
 											</ul>
+											<p class="attribution">
+												Designed by Joe Widener using
+												<a href="http://320press.com">320press</a>
+											</p>
 										</div>
 									</div>
 								</nav>
-								
-								<p class="attribution">
-									Designed by Joe Widener using
-									<a href="http://320press.com">320press</a>
-								</p>
 							</div>
 						</div>
 					
@@ -66,7 +65,8 @@
 				var $container = $('#gallery-1');
 				$container.imagesLoaded( function() {
    			 		$container.masonry({ 
-   			 			columnWidth:'.gallery-item'
+   			 			columnWidth: '.gallery-item',
+   			 			isFitWidth: true
    			 		 });
    			 	});
 		</script>

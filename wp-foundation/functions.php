@@ -36,8 +36,8 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 add_image_size( 'wpf-thumb-640', 640, 150, true );
 add_image_size( 'wpf-featured', 639, 300, true );
 add_image_size( 'wpf-home-featured', 1300, 900, true);
-add_image_size( 'wpf-gallery', 900 , 0 , true);
-add_image_size( 'bones-thumb-600', 600, 200, true );
+add_image_size( 'wpf-gallery', 250 );
+add_image_size( 'bones-thumb-600', 600, 200, false);
 add_image_size( 'bones-thumb-300', 300, 150, true );
 
 /* 
@@ -191,7 +191,7 @@ function wp_foundation_js(){
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
 
 function imageLoaded_js() {
-wp_register_script('imageLoaded_js', get_template_directory_uri() . '/javascripts/imagesloaded.js', 'jQuery','1.1', true);
+wp_register_script('imageLoaded_js', get_template_directory_uri() . '/javascripts/imagesloaded.pkgd.min.js', 'jQuery','1.1', true);
 wp_enqueue_script('imageLoaded_js');
 }
 
@@ -271,7 +271,7 @@ add_filter('comment_class', 'add_class_comments');
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
     <span class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</span>
-    <input type="search" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." />
+    <input type="text" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." />
     <input type="submit" id="search-submit" value="'. esc_attr__('Search') .'" />
     </form>';
     return $form;
@@ -641,4 +641,9 @@ function content($limit) {
   $content = str_replace(']]>', ']]&gt;', $content);
   return $content;
 }
+
+function remove_gallery_css( $css ) {
+    return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
+}
+add_filter( 'gallery_style', 'remove_gallery_css' );
 ?>

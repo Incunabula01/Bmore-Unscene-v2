@@ -29,6 +29,30 @@ Template Name: Archive Page
 							</header> <!-- end article header -->
 						
 							<section class="post_content">
+								<?php 
+									$args = array(
+    									'post_type' => 'attachment',
+    									'post_status' => 'published',
+									    'posts_per_page' =>25,
+									    'post_parent' => 210, // Post-> ID;
+									    'numberposts' => null,
+										);
+
+									$attachments = get_posts($args);
+
+									$post_count = count ($attachments);
+
+									if ($attachments) {
+									    foreach ($attachments as $attachment) {
+									    echo "<div class=\"post photo col3\">";
+									        $url = get_attachment_link($attachment->ID);// extraigo la _posturl del attachmnet      
+									        $img = wp_get_attachment_url($attachment->ID);
+									        $title = get_the_title($attachment->post_parent);//extraigo titulo
+									        echo '<a href="'.$url.'"><img title="'.$title.'" src="'.get_bloginfo('template_url').'/timthumb.php?src='.$img.'&w=350&h=500&zc=3"></a>';
+									        echo "</div>";
+									    }   
+									}
+								?>
 								<?php the_content(); ?>
 						
 							</section> <!-- end article section -->

@@ -13,12 +13,14 @@
 	#top-header-page
 		background-color: $base-color
 		min-width: 100%
-		max-height: 3.5em
+		max-height: 3.6em
+		border: 0em
 
 	#top-header
 		min-width: 100%
-		max-height: 3.5em
+		max-height: 3.6em
 		background-color: $base-color
+		border: 0em
 
 	#main-logo
 		background: none
@@ -38,8 +40,10 @@
 		h4.subhead 
 			display: none
 	.active
-		border-color: none
+		border-color: $base-color
 		border: 0em
+	.active:hover
+		background-color: $background
 		
 	.icon-reorder
 		font-size: 1.4em
@@ -57,7 +61,7 @@
 		background-color: $dark-grey
 		color: $white
 	.button:active
-		border: 0rem
+		border: 0em
 		color: $off-white
 		background-color: $darker-grey
 		box-shadow: none
@@ -80,27 +84,24 @@
 				border-top: $box-shadow
 			li:last-child
 				padding: 0em
-			li.active
-				border-top: $box-shadow
 			li
 				border: $box-border
 				border-right: 0em
 				border-left: 0em
 				+Remove-Box-Shadow
 				background: $mobile-nav
-				height: 46px
-				padding: 1em 8em 1em 1em
+				height: 50px
+				padding: 1.2em 1em 
 				text-align: left
 				a
 					border-right: 0px
 					font-size: 16px
 					color: $off-white
 					+Remove-Box-Shadow
-					float: right
-					padding: 0em
 					background: none
 					border: 0em
 					text-align: left
+					margin-top: -1.9em
 				a:hover
 					+Button-Transition
 					color: $white
@@ -171,7 +172,6 @@
 			width: 100%
 			margin-top: 0.9em
 			padding: 0 1em
-			max-height: 200px
 		h1
 			margin: 0.4em 0.3em
 		p
@@ -238,10 +238,6 @@
 	.post_content
 		padding-left: 0em
 
-	#gallery-1
-		.gallery-item
-			width: 100%
-
 	.archive_title
 		font-size: 1.5em
 		text-align: center
@@ -250,15 +246,18 @@
 		text-align: center
 
 
+
 /* Tablet to Screen */
 
-@media screen and (min-width:767) and (max-width: 1023)
+@media (min-width:767) and (max-width: 1023)
 	.wrapper
 		padding: 0 1em
 
 	#top-header
+		width: 100%
 		#main-logo
 			width: 200px
+			padding: 2em 0 2em 0.5em
 			h1
 				font-size: 1em
 				font-weight: 100
@@ -271,6 +270,7 @@
 
 	.archive_title
 		font-size: 1.5em
+
 
 		
 		
