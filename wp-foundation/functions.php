@@ -36,9 +36,10 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 add_image_size( 'wpf-thumb-640', 640, 150, true );
 add_image_size( 'wpf-featured', 639, 300, true );
 add_image_size( 'wpf-home-featured', 1300, 900, true);
-add_image_size( 'wpf-gallery', 250 );
+add_image_size( 'wpf-gallery', 300 );
 add_image_size( 'bones-thumb-600', 600, 200, false);
 add_image_size( 'bones-thumb-300', 300, 150, true );
+add_image_size( 'bullet-thumb-100', 100, 100, true );
 
 /* 
 to add more sizes, simply copy a line from above 
@@ -149,7 +150,7 @@ if( $test_url !== false ) { // test if the URL exists
 
     function load_local_jQuery() {  
         wp_deregister_script('jquery'); // initiate the function  
-        wp_register_script('jquery', bloginfo('template_uri').'/javascripts/jquery.min.js', __FILE__, false, '1.7.2', true); // register the local file  
+        wp_register_script('jquery', bloginfo('template_uri').'../javascripts/jquery.min.js', __FILE__, false, '1.7.2', true); // register the local file  
         wp_enqueue_script('jquery'); // enqueue the local file  
     }  
 

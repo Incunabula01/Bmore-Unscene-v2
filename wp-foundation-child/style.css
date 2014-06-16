@@ -78,7 +78,7 @@ p {
 
 /* line 8, stylesheets/_header.sass */
 #top-header {
-  background-color: rgba(140, 140, 140, 0.6);
+  background-color: rgba(145, 145, 145, 0.7);
   color: #eeeeee;
   max-height: 9em;
   z-index: 2000;
@@ -340,26 +340,29 @@ ul.social-media-icons li a:active {
 /* line 1, stylesheets/_homepage.sass */
 .caption-container {
   display: block;
-  background-color: #6d6d6d;
-  opacity: 0.9;
+  background-color: rgba(145, 145, 145, 0.7);
   max-width: 30em;
   height: 21em;
   top: 12em;
   position: relative;
 }
+/* line 8, stylesheets/_homepage.sass */
+.caption-container p {
+  color: white;
+}
 
-/* line 11, stylesheets/_homepage.sass */
+/* line 12, stylesheets/_homepage.sass */
 #featured {
   max-height: 45em;
   opacity: 1;
   margin-top: -10em;
   background: url(spinner.gif) center center #f4f4f4 no-repeat;
 }
-/* line 16, stylesheets/_homepage.sass */
+/* line 17, stylesheets/_homepage.sass */
 #featured img {
   display: none;
 }
-/* line 18, stylesheets/_homepage.sass */
+/* line 19, stylesheets/_homepage.sass */
 #featured h3 {
   color: white;
   width: 80%;
@@ -368,26 +371,54 @@ ul.social-media-icons li a:active {
   padding-top: 0.8em;
   margin-top: 0em;
 }
-/* line 25, stylesheets/_homepage.sass */
+/* line 26, stylesheets/_homepage.sass */
 #featured p {
   width: 90%;
   padding-left: 1.5em;
   color: #cfcfcf;
 }
-/* line 29, stylesheets/_homepage.sass */
+/* line 30, stylesheets/_homepage.sass */
 #featured .orbit {
   background: none;
 }
-/* line 31, stylesheets/_homepage.sass */
+/* line 32, stylesheets/_homepage.sass */
 #featured .orbit img {
   display: block;
 }
 
-/* line 34, stylesheets/_homepage.sass */
+/* line 35, stylesheets/_homepage.sass */
+div.orbit.with-bullets {
+  margin-bottom: 12.5em;
+}
+
+/* line 39, stylesheets/_homepage.sass */
+ul.orbit-bullets {
+  bottom: -25%;
+  display: inline;
+}
+/* line 42, stylesheets/_homepage.sass */
+ul.orbit-bullets li.has-thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  border: 0em;
+  background-color: #8b8b8b;
+  opacity: 1;
+}
+/* line 49, stylesheets/_homepage.sass */
+ul.orbit-bullets li:hover {
+  opacity: 0.5;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 53, stylesheets/_homepage.sass */
 .post-image {
   top: 0.5em;
 }
-/* line 36, stylesheets/_homepage.sass */
+/* line 55, stylesheets/_homepage.sass */
 .post-image h2 {
   height: 1.2em;
   top: 0em;
@@ -397,7 +428,7 @@ ul.social-media-icons li a:active {
   bottom: 0.25em;
   padding: 0 0.1em;
 }
-/* line 38, stylesheets/_homepage.sass */
+/* line 57, stylesheets/_homepage.sass */
 .post-image p {
   overflow: hidden;
 }
@@ -406,16 +437,8 @@ ul.social-media-icons li a:active {
 #main .page-header {
   background-color: #f0f0f0;
 }
-
 /* line 5, stylesheets/_post.sass */
-.attachment-wpf-home-featured {
-  margin-top: -10em;
-  max-height: 50em;
-  width: 100%;
-}
-
-/* line 11, stylesheets/_post.sass */
-article h1 {
+#main article h1 {
   height: 1.2em;
   top: 0em;
   color: #6d6d6d;
@@ -424,10 +447,21 @@ article h1 {
   bottom: 0.25em;
   padding: 0 0.1em;
 }
-/* line 13, stylesheets/_post.sass */
-article p.meta {
+/* line 7, stylesheets/_post.sass */
+#main article p.meta {
   padding-bottom: 0.4em;
   color: #2d2d2d;
+}
+/* line 10, stylesheets/_post.sass */
+#main article img {
+  margin-bottom: 0em;
+}
+
+/* line 13, stylesheets/_post.sass */
+.attachment-wpf-home-featured {
+  margin-top: -10em;
+  max-height: 50em;
+  width: 100%;
 }
 
 /* line 2, stylesheets/_sidebar.sass */
@@ -585,24 +619,29 @@ p {
 
 /* line 69, stylesheets/_misc.sass */
 #gallery-1 {
-  margin: 0 auto;
+  margin: 0 0.2em;
 }
 
 /* line 72, stylesheets/_misc.sass */
 .gallery-item {
-  margin: 1em;
+  margin: 0.4em;
+  length: 8em;
 }
-/* line 74, stylesheets/_misc.sass */
+/* line 75, stylesheets/_misc.sass */
+.gallery-item img {
+  margin-bottom: 0em;
+}
+/* line 77, stylesheets/_misc.sass */
 .gallery-item img:hover {
-  background-color: rgba(140, 140, 140, 0.6);
+  background-color: rgba(145, 145, 145, 0.7);
   -webkit-transition: background-color 0.5s ease-in-out;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 77, stylesheets/_misc.sass */
+/* line 80, stylesheets/_misc.sass */
 .gallery-item img:active {
-  background-color: rgba(76, 76, 76, 0.6);
+  background-color: rgba(81, 81, 81, 0.7);
 }
 
 /* Phone to Tablet */

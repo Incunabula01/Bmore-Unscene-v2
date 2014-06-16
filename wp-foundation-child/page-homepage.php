@@ -19,44 +19,44 @@ Template Name: Homepage
 
 						?>
 						
-						<header>
-						
-							<div id="featured">
+							<header>
+							
+								<div id="featured">
 
-								<?php
-									global $post;
-									$tmp_post = $post;
-									$args = array( 'numberposts' => 6 );
-									$myposts = get_posts( $args );
-									foreach( $myposts as $post ) :	setup_postdata($post); 
-										$post_thumbnail_id = get_post_thumbnail_id($post_id);
-										$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpf-home-featured' );
-								?>
-								
-								<div style="background-size:cover; background-image: url(<?php echo $featured_src[0]; ?>);">
-									<div class="wrapper">
-										<span class="caption-container">
-											<h3><?php the_title(); ?></h3>
-												<p><?php echo excerpt(30); ?></p>
-											<p><a href="<?php the_permalink(); ?>" class="button">Read more »</a></p>
-										</span>
+									<?php
+										global $post;
+										$tmp_post = $post;
+										$args = array( 'numberposts' => 6 );
+										$myposts = get_posts( $args );
+										foreach( $myposts as $post ) :	setup_postdata($post); 
+											$post_thumbnail_id = get_post_thumbnail_id($post_id);
+											$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpf-home-featured' );
+									?>
+									
+									<div style="background-size:cover; background-image: url(<?php echo $featured_src[0]; ?>);" data-thumb="<?php echo wp_get_attachment_url(); ?>">
+										<div class="wrapper">
+											<span class="caption-container">
+												<h3><?php the_title(); ?></h3>
+													<p><?php echo excerpt(30); ?></p>
+												<p><a href="<?php the_permalink(); ?>" class="button">Read more »</a></p>
+											</span>
+										</div>
 									</div>
+									
+									<?php endforeach; ?>
+									<?php $post = $tmp_post; ?>
+
 								</div>
 								
-								<?php endforeach; ?>
-								<?php $post = $tmp_post; ?>
+							</header>
 
-							</div>
-							
-						</header>
-
-						<script type="text/javascript">
-						   $(window).load(function() {
-						       		$('#featured').orbit({ 
-						       		fluid: '16x9'
-						       });
-						   });
-						</script>
+							<script type="text/javascript">
+							   $(window).load(function() { 
+							       		$('#featured').orbit({ 
+							       		fluid: '16x9'
+							       });
+							   });
+							</script>
 
 						<?php } ?>
 
