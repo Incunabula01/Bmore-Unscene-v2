@@ -192,11 +192,26 @@ function wp_foundation_js(){
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
 
 function imageLoaded_js() {
-wp_register_script('imageLoaded_js', get_template_directory_uri() . '/javascripts/imagesloaded.pkgd.min.js', 'jQuery','1.1', true);
+wp_register_script('imageLoaded_js', get_stylesheet_directory_uri() . '/javascripts/imagesloaded.pkgd.min.js', 'jQuery','1.1', true);
 wp_enqueue_script('imageLoaded_js');
 }
 
 add_action( 'wp_enqueue_scripts', 'imageLoaded_js' );  
+
+function skrollr_stylesheets_js(){
+wp_register_script("skrollr_stylesheets_js", get_stylesheet_directory_uri() . '/javascripts/skrollr.stylesheets.js', true);
+wp_enqueue_script("skrollr_stylesheets_js");
+}
+
+add_action('wp_enqueue_scripts' , 'skrollr_stylesheets_js' );
+
+function skrollr_js() {
+wp_register_script('skrollr_js', get_stylesheet_directory_uri() . '/javascripts/skrollr.min.js', true);
+wp_enqueue_script('skrollr_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'skrollr_js' ); 
+
 
 if (! function_exists('slug_scripts_masonry') ) :
 if ( ! is_admin() ) :

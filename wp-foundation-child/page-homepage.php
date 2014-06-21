@@ -4,6 +4,7 @@ Template Name: Homepage
 */
 ?>
 
+
 <?php get_header(); ?>
 			
 			<div id="content">
@@ -33,7 +34,7 @@ Template Name: Homepage
 											$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpf-home-featured' );
 									?>
 									
-									<div style="background-size:cover; background-image: url(<?php echo $featured_src[0]; ?>);" data-thumb="<?php echo wp_get_attachment_url(); ?>">
+									<div style="background-size:cover; background-image: url(<?php echo $featured_src[0]; ?>);">
 										<div class="wrapper">
 											<span class="caption-container">
 												<h3><?php the_title(); ?></h3>
@@ -59,6 +60,7 @@ Template Name: Homepage
 							</script>
 
 						<?php } ?>
+
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

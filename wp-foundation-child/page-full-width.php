@@ -55,7 +55,7 @@ Template Name: Full Width Page
 											</div>
 										</div>
 									<?php endforeach ?>
-									
+
 								</div>
 						
 							</section> <!-- end article section -->

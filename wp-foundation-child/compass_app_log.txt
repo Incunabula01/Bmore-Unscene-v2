@@ -1949,3 +1949,43 @@ Load paths:
 2014-06-11 22:38:56 overwrite style.css 
 2014-06-11 22:39:13 overwrite style.css 
 2014-06-11 22:39:44 overwrite style.css 
+2014-06-16 20:09:20    create stylesheets/style.css 
+2014-06-16 20:29:47 overwrite stylesheets/style.css 
+2014-06-18 10:18:59 overwrite style.css 
+2014-06-18 10:27:30 overwrite style.css 
+2014-06-18 10:31:04 overwrite style.css 
+2014-06-18 10:34:15     error stylesheets/style.sass (Line 177 of stylesheets/_media-queries.sass: The line was indented 2 levels deeper than the previous line.)
+2014-06-18 10:34:15 overwrite style.css 
+2014-06-18 10:34:27 overwrite style.css 
+2014-06-18 10:34:59 overwrite style.css 
+2014-06-18 10:36:37 overwrite style.css 
+2014-06-18 10:38:54 overwrite style.css 
+2014-06-18 10:39:33 overwrite style.css 
+2014-06-18 10:40:36 overwrite style.css 
+2014-06-18 11:25:11 overwrite style.css 
+2014-06-18 11:25:50 overwrite style.css 
+2014-06-18 11:26:37 overwrite style.css 
+2014-06-18 11:27:10 overwrite style.css 
+2014-06-18 11:27:30 overwrite style.css 
+2014-06-18 11:28:18 overwrite style.css 
+2014-06-18 11:28:55 overwrite style.css 
+2014-06-18 12:09:15 overwrite style.css 
+2014-06-18 12:11:28 overwrite style.css 
+2014-06-21 14:05:09 overwrite style.css 
+2014-06-21 14:05:44 overwrite style.css 
+2014-06-21 14:49:54 overwrite style.css 
+2014-06-21 14:53:10 overwrite style.css 
+2014-06-21 15:01:38 overwrite style.css 
+2014-06-21 15:19:26 identical style.css 
+2014-06-21 15:20:42 overwrite style.css 
+2014-06-21 15:22:23 overwrite style.css 
+2014-06-21 15:22:37 overwrite style.css 
+2014-06-21 15:30:50 overwrite style.css 
+2014-06-21 15:38:48 overwrite style.css 
+2014-06-21 17:39:56     error stylesheets/style.sass (Line 9 of stylesheets/_header.sass: Undefined mixin 'Header-Transition-Default'.)
+2014-06-21 17:39:56 overwrite style.css 
+2014-06-21 17:40:11     error stylesheets/style.sass (Line 9 of stylesheets/_header.sass: Undefined mixin 'Header-Transition-Default'.)
+2014-06-21 17:40:11 identical style.css 
+2014-06-21 17:42:08     error stylesheets/style.sass (Line 9 of stylesheets/_header.sass: Undefined mixin 'Header-Transition-Default'.)
+2014-06-21 17:42:08 identical style.css 
+2014-06-21 17:42:38 overwrite style.css 

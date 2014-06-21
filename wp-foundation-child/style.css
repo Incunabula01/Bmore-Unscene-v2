@@ -29,7 +29,7 @@ Body {
   font-family: BorgiaPro-Regular, serif;
   color: #8b8b8b;
   background-color: #f0f0f0;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 /* line 15, stylesheets/_typography.sass */
@@ -71,26 +71,46 @@ p {
 #top-header-page {
   background-color: #8b8b8b;
   color: #eeeeee;
-  max-height: 9em;
+  width: 100%;
   z-index: 2000;
-  position: relative;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+/* line 20, stylesheets/_mixins.sass */
+#top-header-page -Skrollr-Keyframes-Header-Transition- 0  {
+  max-height: 5.9em;
+}
+/* line 22, stylesheets/_mixins.sass */
+#top-header-page -Skrollr-Keyframes-Header-Transition- 400  {
+  max-height: 4.5em;
 }
 
-/* line 8, stylesheets/_header.sass */
+/* line 11, stylesheets/_header.sass */
 #top-header {
   background-color: rgba(145, 145, 145, 0.7);
   color: #eeeeee;
-  max-height: 9em;
   z-index: 2000;
-  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+/* line 20, stylesheets/_mixins.sass */
+#top-header -Skrollr-Keyframes-Header-Transition- 0  {
+  max-height: 5.9em;
+}
+/* line 22, stylesheets/_mixins.sass */
+#top-header -Skrollr-Keyframes-Header-Transition- 400  {
+  max-height: 4.5em;
 }
 
-/* line 15, stylesheets/_header.sass */
+/* line 22, stylesheets/_header.sass */
 #main-logo {
   display: block;
   padding: 2em 0.5em;
 }
-/* line 18, stylesheets/_header.sass */
+/* line 25, stylesheets/_header.sass */
 #main-logo #logo-icon {
   background: transparent url("images/BmoreUnsceneLogo.png") no-repeat;
   height: 75px;
@@ -98,7 +118,7 @@ p {
   display: block;
   float: left;
 }
-/* line 24, stylesheets/_header.sass */
+/* line 31, stylesheets/_header.sass */
 #main-logo #logo-icon:hover {
   opacity: 0.7;
   -webkit-transition: background-color 0.5s ease-in-out;
@@ -106,7 +126,7 @@ p {
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 27, stylesheets/_header.sass */
+/* line 34, stylesheets/_header.sass */
 #main-logo h1 {
   font-size: 2em;
   font-weight: 100;
@@ -114,11 +134,11 @@ p {
   margin-top: 10px;
   margin-bottom: 1px;
 }
-/* line 33, stylesheets/_header.sass */
+/* line 40, stylesheets/_header.sass */
 #main-logo h1 #logo {
   color: #eeeeee;
 }
-/* line 35, stylesheets/_header.sass */
+/* line 42, stylesheets/_header.sass */
 #main-logo h4.subhead {
   color: white;
   padding-left: 3.6em;
@@ -127,46 +147,46 @@ p {
   margin-bottom: 0px;
 }
 
-/* line 42, stylesheets/_header.sass */
+/* line 49, stylesheets/_header.sass */
 .active {
   background: #6d6d6d;
   border: 0.1em solid #cfcfcf;
 }
 
-/* line 45, stylesheets/_header.sass */
+/* line 52, stylesheets/_header.sass */
 .active:hover {
   background-color: #2d2d2d;
 }
 
-/* line 49, stylesheets/_header.sass */
+/* line 56, stylesheets/_header.sass */
 .nav-bar {
   margin-top: 3.5em;
   height: 4em;
   background: transparent;
 }
-/* line 53, stylesheets/_header.sass */
+/* line 60, stylesheets/_header.sass */
 .nav-bar li:last-child {
   border-right: none;
   border: none;
 }
-/* line 56, stylesheets/_header.sass */
+/* line 63, stylesheets/_header.sass */
 .nav-bar li.active {
   background: #2d2d2d;
   border-color: #2d2d2d;
 }
-/* line 59, stylesheets/_header.sass */
+/* line 66, stylesheets/_header.sass */
 .nav-bar li.active:hover {
   background: #7b0a00;
 }
-/* line 61, stylesheets/_header.sass */
+/* line 68, stylesheets/_header.sass */
 .nav-bar li:hover {
   background-color: #070707;
 }
-/* line 63, stylesheets/_header.sass */
+/* line 70, stylesheets/_header.sass */
 .nav-bar li:focus {
   background-color: black;
 }
-/* line 65, stylesheets/_header.sass */
+/* line 72, stylesheets/_header.sass */
 .nav-bar li {
   padding: 0 1em;
   border: 0.1em solid #6d6d6d;
@@ -181,17 +201,17 @@ p {
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 72, stylesheets/_header.sass */
+/* line 79, stylesheets/_header.sass */
 .nav-bar li a {
   color: #bfbfbf;
   font-size: 1.2em;
   float: right;
 }
-/* line 77, stylesheets/_header.sass */
+/* line 84, stylesheets/_header.sass */
 .nav-bar li a:first-child {
   padding: 0 0.5em;
 }
-/* line 79, stylesheets/_header.sass */
+/* line 86, stylesheets/_header.sass */
 .nav-bar li a:hover {
   color: white;
   -webkit-transition: background-color 0.5s ease-in-out;
@@ -199,18 +219,18 @@ p {
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 83, stylesheets/_header.sass */
+/* line 90, stylesheets/_header.sass */
 .nav-bar li label {
   margin: 0px;
   height: 40px;
   border: 0em;
 }
-/* line 87, stylesheets/_header.sass */
+/* line 94, stylesheets/_header.sass */
 .nav-bar li label .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
-/* line 90, stylesheets/_header.sass */
+/* line 97, stylesheets/_header.sass */
 .nav-bar li label .search-field {
   background: transparent url("images/search-icon.png") 0 0 no-repeat;
   height: 38px;
@@ -229,17 +249,17 @@ p {
   -o-box-shadow: none;
   box-shadow: none;
 }
-/* line 104, stylesheets/_header.sass */
+/* line 111, stylesheets/_header.sass */
 .nav-bar li label .search-field:focus {
   background: white url("images/search-icon.png") -38px 0 no-repeat;
   width: 150px;
   border: 0em;
 }
-/* line 108, stylesheets/_header.sass */
+/* line 115, stylesheets/_header.sass */
 .nav-bar li label .search-field:hover {
   border: 0em;
 }
-/* line 110, stylesheets/_header.sass */
+/* line 117, stylesheets/_header.sass */
 .nav-bar li label #search-submit {
   display: none;
   padding: 0px;
@@ -355,7 +375,7 @@ ul.social-media-icons li a:active {
 #featured {
   max-height: 45em;
   opacity: 1;
-  margin-top: -10em;
+  margin-top: 0em;
   background: url(spinner.gif) center center #f4f4f4 no-repeat;
 }
 /* line 17, stylesheets/_homepage.sass */
@@ -459,7 +479,7 @@ ul.orbit-bullets li:hover {
 
 /* line 13, stylesheets/_post.sass */
 .attachment-wpf-home-featured {
-  margin-top: -10em;
+  margin-top: 0em;
   max-height: 50em;
   width: 100%;
 }
@@ -916,80 +936,81 @@ p {
   }
 
   /* line 171, stylesheets/_media-queries.sass */
-  article img {
-    width: 100%;
-    margin-top: 0.9em;
-    padding: 0 1em;
-  }
-  /* line 175, stylesheets/_media-queries.sass */
   article h1 {
     margin: 0.4em 0.3em;
   }
-  /* line 177, stylesheets/_media-queries.sass */
+  /* line 173, stylesheets/_media-queries.sass */
   article p {
     padding: 0 1em;
   }
 
-  /* line 180, stylesheets/_media-queries.sass */
+  /* line 176, stylesheets/_media-queries.sass */
+  .attachment-wpf-home-featured {
+    min-width: 100%;
+    margin-top: 0.9em;
+    padding: 0 1em;
+  }
+
+  /* line 181, stylesheets/_media-queries.sass */
   .panel {
     display: none;
   }
-  /* line 182, stylesheets/_media-queries.sass */
+  /* line 183, stylesheets/_media-queries.sass */
   .panel .widget {
     display: none;
   }
 
-  /* line 185, stylesheets/_media-queries.sass */
+  /* line 186, stylesheets/_media-queries.sass */
   .error-image {
     background: none;
     padding-top: 0em;
   }
 
-  /* line 189, stylesheets/_media-queries.sass */
+  /* line 190, stylesheets/_media-queries.sass */
   .mobile-footer {
     display: block;
     text-align: center;
     min-height: 7em;
   }
-  /* line 193, stylesheets/_media-queries.sass */
+  /* line 194, stylesheets/_media-queries.sass */
   .mobile-footer h5 {
     margin: 0.2em 0;
   }
-  /* line 195, stylesheets/_media-queries.sass */
+  /* line 196, stylesheets/_media-queries.sass */
   .mobile-footer .footer-menu {
     margin: 0 auto;
   }
-  /* line 197, stylesheets/_media-queries.sass */
+  /* line 198, stylesheets/_media-queries.sass */
   .mobile-footer .footer-menu .widgettitle {
     text-align: center;
     border-bottom: 0.1em solid #f0f0f0;
   }
-  /* line 200, stylesheets/_media-queries.sass */
+  /* line 201, stylesheets/_media-queries.sass */
   .mobile-footer .footer-menu li {
     text-align: center;
     margin: 0.5em 0;
   }
-  /* line 203, stylesheets/_media-queries.sass */
+  /* line 204, stylesheets/_media-queries.sass */
   .mobile-footer .footer-menu li a {
     font-size: 120%;
   }
-  /* line 205, stylesheets/_media-queries.sass */
+  /* line 206, stylesheets/_media-queries.sass */
   .mobile-footer .mobile-social-media-icons {
     list-style: none;
     text-decoration: none;
     display: block;
     margin-top: 1em;
   }
-  /* line 210, stylesheets/_media-queries.sass */
+  /* line 211, stylesheets/_media-queries.sass */
   .mobile-footer .mobile-social-media-icons li:first-child {
     margin-left: 0em;
   }
-  /* line 212, stylesheets/_media-queries.sass */
+  /* line 213, stylesheets/_media-queries.sass */
   .mobile-footer .mobile-social-media-icons li {
     margin-left: 4em;
     display: inline-block;
   }
-  /* line 215, stylesheets/_media-queries.sass */
+  /* line 216, stylesheets/_media-queries.sass */
   .mobile-footer .mobile-social-media-icons li a {
     color: #bfbfbf;
     -webkit-transition: background-color 0.5s ease-in-out;
@@ -997,12 +1018,12 @@ p {
     -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
   }
-  /* line 218, stylesheets/_media-queries.sass */
+  /* line 219, stylesheets/_media-queries.sass */
   .mobile-footer .mobile-social-media-icons li a:hover {
     color: white;
   }
 
-  /* line 220, stylesheets/_media-queries.sass */
+  /* line 221, stylesheets/_media-queries.sass */
   p.attribution {
     display: block;
     text-align: center;
@@ -1010,70 +1031,76 @@ p {
     margin-right: 0em;
   }
 
-  /* line 228, stylesheets/_media-queries.sass */
+  /* line 229, stylesheets/_media-queries.sass */
   #site-footer .footer-links {
     display: none;
   }
-  /* line 232, stylesheets/_media-queries.sass */
+  /* line 233, stylesheets/_media-queries.sass */
   #site-footer .social-media-icons {
     display: none;
   }
 
-  /* line 235, stylesheets/_media-queries.sass */
+  /* line 236, stylesheets/_media-queries.sass */
   .search-results-header {
     padding-left: 0.7em;
   }
 
-  /* line 238, stylesheets/_media-queries.sass */
+  /* line 239, stylesheets/_media-queries.sass */
   .post_content {
     padding-left: 0em;
   }
 
-  /* line 241, stylesheets/_media-queries.sass */
+  /* line 242, stylesheets/_media-queries.sass */
   .archive_title {
     font-size: 1.5em;
     text-align: center;
   }
 
-  /* line 245, stylesheets/_media-queries.sass */
+  /* line 246, stylesheets/_media-queries.sass */
   .h2 {
     text-align: center;
+  }
+
+  /* line 249, stylesheets/_media-queries.sass */
+  .grid-sizer {
+    width: 50%;
+    height: auto;
   }
 }
 /* Tablet to Screen */
 @media (min-width: 767) and (max-width: 1023) {
-  /* line 253, stylesheets/_media-queries.sass */
+  /* line 258, stylesheets/_media-queries.sass */
   .wrapper {
     padding: 0 1em;
   }
 
-  /* line 256, stylesheets/_media-queries.sass */
+  /* line 261, stylesheets/_media-queries.sass */
   #top-header {
     width: 100%;
   }
-  /* line 258, stylesheets/_media-queries.sass */
+  /* line 263, stylesheets/_media-queries.sass */
   #top-header #main-logo {
     width: 200px;
     padding: 2em 0 2em 0.5em;
   }
-  /* line 261, stylesheets/_media-queries.sass */
+  /* line 266, stylesheets/_media-queries.sass */
   #top-header #main-logo h1 {
     font-size: 1em;
     font-weight: 100;
     line-height: 1em;
   }
 
-  /* line 265, stylesheets/_media-queries.sass */
+  /* line 270, stylesheets/_media-queries.sass */
   .page-header {
     min-height: 500px;
   }
 
-  /* line 268, stylesheets/_media-queries.sass */
+  /* line 273, stylesheets/_media-queries.sass */
   article img {
     max-height: 400px;
   }
 
-  /* line 271, stylesheets/_media-queries.sass */
+  /* line 276, stylesheets/_media-queries.sass */
   .archive_title {
     font-size: 1.5em;
   }

@@ -33,7 +33,7 @@
       captionAnimation: 'none',       // fade, slideOpen, none
       captionAnimationSpeed: 600,     // if so how quickly should they animate in
       resetTimerOnClick: false,      // true resets the timer instead of pausing slideshow progress on manual navigation
-      bullets: true,           // true or false to activate the bullet navigation
+      bullets: false,           // true or false to activate the bullet navigation
       bulletThumbs: true,        // thumbnails for the bullets
       bulletThumbLocation: '../wp_content/uploads/',      // location from this file where thumbs will be
       afterSlideChange: $.noop,   // empty function

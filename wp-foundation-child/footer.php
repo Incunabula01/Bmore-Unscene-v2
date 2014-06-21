@@ -70,6 +70,9 @@
    			 		 });
    			 	});
 		</script>
+		<script text-javascript>
+			var s = skrollr.init();
+		</script>
 
 	</body>
 

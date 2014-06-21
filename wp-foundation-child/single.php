@@ -19,7 +19,7 @@
 							?>
 							
 							<div class="wrapper">
-								<div class="eight columns">
+								<div class="eight columns waypoint" data-animate-down="bm-header" data-animate-up="bm-header">
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
 									<p class="meta">
@@ -32,23 +32,23 @@
 								</div>
 								<?php get_sidebar(); // sidebar 1 ?>
 							</div>
-						
+							
+							<span class="waypoint" data-animate-up="bm-header" data-animate-down="bm-header-small"></span> 
+
 						</header> <!-- end article header -->
 					
 						<div class="wrapper">
 							<section class="post_content seven columns">
 
 										<?php the_content(); ?>
+										<?php comments_template('bones_comments'); ?>
 						
 							</section> <!-- end article section -->
-						</div>
-						<footer>
+							<footer>
 			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
+								<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
 							
-						</footer> <!-- end article footer -->
-						<div class="wrapper">
-							<?php comments_template('bones_comments'); ?>
+							</footer> <!-- end article footer -->
 						</div>
 					</article> <!-- end article -->
 										

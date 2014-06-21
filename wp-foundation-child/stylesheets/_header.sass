@@ -1,16 +1,23 @@
 #top-header-page
 	background-color: $base-color
 	color: $header-text
-	max-height: 9em
+	width: 100%
 	z-index: 2000
-	position: relative
+	top: 0
+	left: 0
+	position: fixed
+	+Header-Transition-1
 
 #top-header
 	background-color: $transparency
 	color: $header-text
-	max-height: 9em
 	z-index: 2000
-	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	position: fixed
+	+Header-Transition-1
+	
 	
 #main-logo
 	display: block
