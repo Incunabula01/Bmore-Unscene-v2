@@ -71,7 +71,9 @@
    			 	});
 		</script>
 		<script text-javascript>
-			var s = skrollr.init();
+			$('#top-header').waypoint('sticky' , {
+				offset: -122
+			});
 		</script>
 
 	</body>

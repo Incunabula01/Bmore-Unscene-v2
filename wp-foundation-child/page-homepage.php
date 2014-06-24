@@ -61,7 +61,6 @@ Template Name: Homepage
 
 						<?php } ?>
 
-
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<section class="row post_content">
@@ -92,12 +91,13 @@ Template Name: Homepage
 											</div>
 										</div>
 									<?php endforeach ?>
+
 								</div>
 							</div>
 								
-							
-													
 						</section> <!-- end article header -->
+
+						<span class="waypoint" data-animate-down="bu-header-small" data-animate-up="bu-header-large"></span>
 						
 						<footer>
 			
@@ -107,10 +107,6 @@ Template Name: Homepage
 					
 					</article> <!-- end article -->
 					
-					<?php 
-						// No comments on homepage
-						//comments_template();
-					?>
 					
 					<?php endwhile; ?>	
 					

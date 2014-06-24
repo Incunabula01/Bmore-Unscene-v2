@@ -198,19 +198,19 @@ wp_enqueue_script('imageLoaded_js');
 
 add_action( 'wp_enqueue_scripts', 'imageLoaded_js' );  
 
-function skrollr_stylesheets_js(){
-wp_register_script("skrollr_stylesheets_js", get_stylesheet_directory_uri() . '/javascripts/skrollr.stylesheets.js', true);
-wp_enqueue_script("skrollr_stylesheets_js");
+function jqueryWayPoints_js() {
+wp_register_script('jqueryWayPoints_js', get_stylesheet_directory_uri() . '/javascripts/waypoints.min.js', 'jQuery' , '1.1', true);
+wp_enqueue_script('jqueryWayPoints_js');
 }
 
-add_action('wp_enqueue_scripts' , 'skrollr_stylesheets_js' );
+add_action( 'wp_enqueue_scripts', 'jqueryWayPoints_js' ); 
 
-function skrollr_js() {
-wp_register_script('skrollr_js', get_stylesheet_directory_uri() . '/javascripts/skrollr.min.js', true);
-wp_enqueue_script('skrollr_js');
+function stickyWayPoints_js() {
+wp_register_script('stickyWayPoints_js', get_stylesheet_directory_uri() . '/javascripts/waypoints-sticky.min.js', 'jQuery' , '1.1', true);
+wp_enqueue_script('stickyWayPoints_js');
 }
 
-add_action( 'wp_enqueue_scripts', 'skrollr_js' ); 
+add_action( 'wp_enqueue_scripts', 'stickyWayPoints_js' ); 
 
 
 if (! function_exists('slug_scripts_masonry') ) :

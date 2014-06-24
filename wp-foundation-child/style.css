@@ -68,125 +68,188 @@ p {
 }
 
 /* line 1, stylesheets/_header.sass */
-#top-header-page {
+.bu-header-page {
   background-color: #8b8b8b;
   color: #eeeeee;
   width: 100%;
   z-index: 2000;
   top: 0;
   left: 0;
-  position: fixed;
-}
-/* line 20, stylesheets/_mixins.sass */
-#top-header-page -Skrollr-Keyframes-Header-Transition- 0  {
-  max-height: 5.9em;
-}
-/* line 22, stylesheets/_mixins.sass */
-#top-header-page -Skrollr-Keyframes-Header-Transition- 400  {
-  max-height: 4.5em;
+  position: relative;
 }
 
-/* line 11, stylesheets/_header.sass */
-#top-header {
+/* line 10, stylesheets/_header.sass */
+.bu-header {
   background-color: rgba(145, 145, 145, 0.7);
   color: #eeeeee;
-  z-index: 2000;
   top: 0;
   left: 0;
   width: 100%;
-  position: fixed;
-}
-/* line 20, stylesheets/_mixins.sass */
-#top-header -Skrollr-Keyframes-Header-Transition- 0  {
-  max-height: 5.9em;
-}
-/* line 22, stylesheets/_mixins.sass */
-#top-header -Skrollr-Keyframes-Header-Transition- 400  {
-  max-height: 4.5em;
+  display: block;
+  position: relative;
+  z-index: 2000;
 }
 
-/* line 22, stylesheets/_header.sass */
+/* line 20, stylesheets/_header.sass */
+.stuck {
+  background-color: rgba(145, 145, 145, 0.7);
+  position: fixed;
+  max-height: 66px;
+}
+/* line 24, stylesheets/_header.sass */
+.stuck #main-logo {
+  padding: 0.5em 0 0 0.5em;
+  -webkit-transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 27, stylesheets/_header.sass */
+.stuck #main-logo .logo-icon {
+  background: none;
+  height: 0px;
+  width: 0px;
+  display: none;
+  -webkit-transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 33, stylesheets/_header.sass */
+.stuck #main-logo h1 {
+  margin: 0em;
+  font-size: 2em;
+  padding-left: 0em;
+  -webkit-transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 38, stylesheets/_header.sass */
+.stuck #main-logo h4.subhead {
+  padding-left: 0em;
+  -webkit-transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 41, stylesheets/_header.sass */
+.stuck .nav-bar {
+  z-index: 3000;
+  position: relative;
+  margin-top: 1em;
+  -webkit-transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 46, stylesheets/_header.sass */
+.stuck .nav-bar li:hover {
+  color: #bfbfbf;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 52, stylesheets/_header.sass */
 #main-logo {
   display: block;
   padding: 2em 0.5em;
 }
-/* line 25, stylesheets/_header.sass */
-#main-logo #logo-icon {
+/* line 55, stylesheets/_header.sass */
+#main-logo .logo-icon {
   background: transparent url("images/BmoreUnsceneLogo.png") no-repeat;
   height: 75px;
   width: 75px;
   display: block;
   float: left;
 }
-/* line 31, stylesheets/_header.sass */
-#main-logo #logo-icon:hover {
+/* line 61, stylesheets/_header.sass */
+#main-logo .logo-icon:hover {
   opacity: 0.7;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 34, stylesheets/_header.sass */
+/* line 64, stylesheets/_header.sass */
 #main-logo h1 {
   font-size: 2em;
   font-weight: 100;
   padding-left: 3em;
   margin-top: 10px;
   margin-bottom: 1px;
+  height: 100%;
 }
-/* line 40, stylesheets/_header.sass */
+/* line 71, stylesheets/_header.sass */
 #main-logo h1 #logo {
   color: #eeeeee;
 }
-/* line 42, stylesheets/_header.sass */
+/* line 73, stylesheets/_header.sass */
 #main-logo h4.subhead {
   color: white;
   padding-left: 3.6em;
   font-weight: 100;
   margin-top: 0px;
   margin-bottom: 0px;
+  height: 100%;
 }
 
-/* line 49, stylesheets/_header.sass */
+/* line 81, stylesheets/_header.sass */
 .active {
   background: #6d6d6d;
   border: 0.1em solid #cfcfcf;
 }
 
-/* line 52, stylesheets/_header.sass */
+/* line 84, stylesheets/_header.sass */
 .active:hover {
   background-color: #2d2d2d;
 }
 
-/* line 56, stylesheets/_header.sass */
+/* line 88, stylesheets/_header.sass */
 .nav-bar {
   margin-top: 3.5em;
   height: 4em;
   background: transparent;
 }
-/* line 60, stylesheets/_header.sass */
+/* line 92, stylesheets/_header.sass */
 .nav-bar li:last-child {
   border-right: none;
   border: none;
 }
-/* line 63, stylesheets/_header.sass */
+/* line 95, stylesheets/_header.sass */
 .nav-bar li.active {
   background: #2d2d2d;
   border-color: #2d2d2d;
 }
-/* line 66, stylesheets/_header.sass */
+/* line 98, stylesheets/_header.sass */
 .nav-bar li.active:hover {
   background: #7b0a00;
 }
-/* line 68, stylesheets/_header.sass */
+/* line 100, stylesheets/_header.sass */
 .nav-bar li:hover {
   background-color: #070707;
 }
-/* line 70, stylesheets/_header.sass */
+/* line 102, stylesheets/_header.sass */
 .nav-bar li:focus {
   background-color: black;
 }
-/* line 72, stylesheets/_header.sass */
+/* line 104, stylesheets/_header.sass */
 .nav-bar li {
   padding: 0 1em;
   border: 0.1em solid #6d6d6d;
@@ -196,41 +259,39 @@ p {
   -o-box-shadow: none;
   box-shadow: none;
   background-color: #6d6d6d;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
 }
-/* line 79, stylesheets/_header.sass */
+/* line 110, stylesheets/_header.sass */
 .nav-bar li a {
   color: #bfbfbf;
   font-size: 1.2em;
   float: right;
 }
-/* line 84, stylesheets/_header.sass */
+/* line 115, stylesheets/_header.sass */
 .nav-bar li a:first-child {
   padding: 0 0.5em;
 }
-/* line 86, stylesheets/_header.sass */
+/* line 117, stylesheets/_header.sass */
 .nav-bar li a:hover {
   color: white;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-/* line 90, stylesheets/_header.sass */
+/* line 121, stylesheets/_header.sass */
 .nav-bar li label {
   margin: 0px;
   height: 40px;
   border: 0em;
 }
-/* line 94, stylesheets/_header.sass */
+/* line 125, stylesheets/_header.sass */
 .nav-bar li label .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
-/* line 97, stylesheets/_header.sass */
+/* line 128, stylesheets/_header.sass */
 .nav-bar li label .search-field {
   background: transparent url("images/search-icon.png") 0 0 no-repeat;
   height: 38px;
@@ -238,6 +299,8 @@ p {
   position: relative;
   transition: width 400ms ease, background 400ms ease;
   -webkit-transition: width 400ms ease, background 400ms ease;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
   -moz-transition: width 400ms ease, background 400ms ease;
   -o-transition: width 400ms ease, background 400ms ease;
   width: 0px;
@@ -249,17 +312,17 @@ p {
   -o-box-shadow: none;
   box-shadow: none;
 }
-/* line 111, stylesheets/_header.sass */
+/* line 144, stylesheets/_header.sass */
 .nav-bar li label .search-field:focus {
   background: white url("images/search-icon.png") -38px 0 no-repeat;
   width: 150px;
   border: 0em;
 }
-/* line 115, stylesheets/_header.sass */
+/* line 148, stylesheets/_header.sass */
 .nav-bar li label .search-field:hover {
   border: 0em;
 }
-/* line 117, stylesheets/_header.sass */
+/* line 150, stylesheets/_header.sass */
 .nav-bar li label #search-submit {
   display: none;
   padding: 0px;
@@ -299,6 +362,8 @@ p {
 .footer-menu ul a:hover {
   color: #c71100;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -327,6 +392,8 @@ ul.social-media-icons li a {
 ul.social-media-icons li a:hover {
   color: #c71100;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -375,7 +442,7 @@ ul.social-media-icons li a:active {
 #featured {
   max-height: 45em;
   opacity: 1;
-  margin-top: 0em;
+  margin-top: -7em;
   background: url(spinner.gif) center center #f4f4f4 no-repeat;
 }
 /* line 17, stylesheets/_homepage.sass */
@@ -429,6 +496,8 @@ ul.orbit-bullets li.has-thumb {
 ul.orbit-bullets li:hover {
   opacity: 0.5;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -479,7 +548,7 @@ ul.orbit-bullets li:hover {
 
 /* line 13, stylesheets/_post.sass */
 .attachment-wpf-home-featured {
-  margin-top: 0em;
+  margin-top: -7em;
   max-height: 50em;
   width: 100%;
 }
@@ -592,6 +661,8 @@ div.panel.callout a:hover {
 div.panel.callout .button {
   background: #8b8b8b;
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -655,6 +726,8 @@ p {
 .gallery-item img:hover {
   background-color: rgba(145, 145, 145, 0.7);
   -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -790,6 +863,8 @@ p {
     background: #141414;
     color: white;
     -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
     -moz-transition: background-color 0.5s ease-in-out;
     -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
@@ -833,6 +908,8 @@ p {
   /* line 105, stylesheets/_media-queries.sass */
   .mobile-nav-container ul.tabs.vertical li a:hover {
     -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
     -moz-transition: background-color 0.5s ease-in-out;
     -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
@@ -1014,6 +1091,8 @@ p {
   .mobile-footer .mobile-social-media-icons li a {
     color: #bfbfbf;
     -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
     -moz-transition: background-color 0.5s ease-in-out;
     -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;

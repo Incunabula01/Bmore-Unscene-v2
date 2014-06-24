@@ -51,10 +51,11 @@
 
 		<div class="row container">
 			<div class="twelve columns">
-				<header role="banner" id="top-header">
+				<header role="banner" id="top-header" class="bu-header">
 					<div class="wrapper">
-							<?php bones_main_nav(right); // Adjust using Menus in Wordpress Admin ?>
-
+							
+								<?php bones_main_nav(right); // Adjust using Menus in Wordpress Admin ?>
+							
 							<div class="show-for-small menu-action">
 					  	    	<a href="#sidebar" id="mobile-nav-button" class="sidebar-button small button">
 									<i class="icon-reorder" alt="Menu"></i> 
@@ -66,14 +67,16 @@
 							<div class="siteinfo">
 								<div id="main-logo">
 									<a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>">
-										<div id="logo-icon"></div>
+										<div class="logo-icon"></div>
 									</a>
-									<h1>
-										<?php bloginfo('name'); ?>
-									</h1>
-									<h4 class="subhead">
-										<?php echo get_bloginfo ( 'description' ); ?>
-									</h4>
+									<a href="<?php echo get_bloginfo('url'); ?>" >
+										<h1>
+											<?php bloginfo('name'); ?>
+										</h1>
+									</a>
+										<h4 class="subhead">
+											<?php echo get_bloginfo ( 'description' ); ?>
+										</h4>
 								</div>
 							</div>
 							
