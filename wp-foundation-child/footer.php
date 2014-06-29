@@ -3,7 +3,6 @@
 						<div class="row">
 							<div class="wrapper">
 								<div class="mobile-footer">
-									<a href="#top"><i class="icon-caret-up icon-3x"><h5>Return to top</h5></i></a>
 									<ul class="mobile-social-media-icons">
 											<li>
 												<a href="#"><i class="icon-facebook-sign icon-4x"></i></a>
@@ -16,8 +15,6 @@
 											</li>
 										</ul>
 										<br/>
-										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-1') ) : ?><?php endif; ?>
-										<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-2') ) : ?><?php endif; ?>
 								</div>		
 								<nav class="twelve columns clearfix hide-for-small">
 									<div class="four columns">
@@ -51,6 +48,7 @@
 						</div>
 					
 			</footer> <!-- end footer -->
+
 		</div>
 		
 	</div> <!-- end #container -->
@@ -69,11 +67,11 @@
    			 			isFitWidth: true
    			 		 });
    			 	});
-		</script>
+		</script> 
 		<script text-javascript>
-			$('#top-header').waypoint('sticky' , {
-				offset: -122
-			});
+				$('#top-header').waypoint('sticky' , {
+					offset: -100
+				});
 		</script>
 
 	</body>

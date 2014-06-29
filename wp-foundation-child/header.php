@@ -50,7 +50,7 @@
 	<body <?php body_class(); ?>>
 
 		<div class="row container">
-			<div class="twelve columns">
+			
 				<header role="banner" id="top-header" class="bu-header">
 					<div class="wrapper">
 							
@@ -82,5 +82,4 @@
 							
 					</div>
 				</header> <!-- end header -->
-			</div>	
-				
+							

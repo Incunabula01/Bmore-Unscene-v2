@@ -7,6 +7,6 @@ javascripts_dir = "js"
 font_dir = "fonts"
 
 output_style = :expanded
-environment = :development
+environment = :production
 
 sass_options = {:debug_info=>false} # by Compass.app 
