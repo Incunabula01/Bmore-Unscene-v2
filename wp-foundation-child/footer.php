@@ -59,7 +59,7 @@
 		<![endif]-->
 		
 		<?php wp_footer(); // js scripts are inserted using this function ?>
-		<script text-javascript>
+		<script type="text/javascript">
 				var $container = $('#gallery-1');
 				$container.imagesLoaded( function() {
    			 		$container.masonry({ 
@@ -67,8 +67,8 @@
    			 			isFitWidth: true
    			 		 });
    			 	});
-		</script> 
-		<script text-javascript>
+		</script>  
+		<script type="text/javascript">
 				$('#top-header').waypoint('sticky' , {
 					offset: -100
 				});

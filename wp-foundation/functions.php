@@ -222,7 +222,7 @@ function slug_scripts_masonry() {
 }
 add_action( 'wp_enqueue_scripts', 'slug_scripts_masonry' );
 endif; //! is_admin()
-endif; //! slug_scripts_masonry exists
+endif; //! slug_scripts_masonry exists 
 
 
 /************* COMMENT LAYOUT *********************/
