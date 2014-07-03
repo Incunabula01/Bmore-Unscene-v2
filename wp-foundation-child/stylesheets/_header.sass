@@ -60,8 +60,13 @@
 		display: block
 		float: left
 	.logo-icon:hover
-		opacity: 0.7
-		+Button-Transition
+		opacity: 0.6
+		-webkit-transition: opacity 0.50s ease-in
+		-webkit-transform-style: preserve-3d
+		-webkit-backface-visibility: hidden
+		-moz-transition: opacity 0.50s ease-in-
+		-o-transition: opacity 0.50s ease-in
+		transition: opacity 0.50s ease-in
 	h1
 		font-size: 2em
 		font-weight: 100
@@ -91,8 +96,9 @@
 	height: 4em
 	background: transparent
 	li:last-child
-		border-right: none
-		border: none
+		border-right: 0em
+		border: 0em
+		+Remove-Box-Shadow
 	li.active
 		background: $darker-grey
 		border-color: $darker-grey
@@ -107,7 +113,7 @@
 		border: 0.1em solid $dark-grey
 		margin-right: 0.5em
 		+Remove-Box-Shadow
-		background-color: $dark-grey
+		background-color: darken($dark-grey, 10%)
 		a
 			color: $anchor-color
 			font-size: 1.2em
