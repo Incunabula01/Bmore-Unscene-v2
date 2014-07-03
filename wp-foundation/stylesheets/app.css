@@ -3502,7 +3502,7 @@ form.custom .custom.disabled {
 */
 /* Container ---------------------- */
 #featured { 
-  background: url(spinner.gif) center center #f4f4f4 no-repeat; height: 300px; 
+  background: url('../images/foundation/orbit/loading.gif') center center #f4f4f4 no-repeat; height: 300px; 
 }
 #featured img { 
   display: none; 

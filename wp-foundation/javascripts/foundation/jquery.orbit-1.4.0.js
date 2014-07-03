@@ -20,32 +20,32 @@
 
     defaults: {
       animation: 'fade',     // fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
-      animationSpeed: 700,        // how fast animtions are
-      timer: true,            // true or false to have the timer
+      animationSpeed: 900,        // how fast animtions are
+      timer: false,            // true or false to have the timer
       advanceSpeed: 4000,         // if timer is enabled, time between transitions
       pauseOnHover: false,        // if you hover pauses the slider
       startClockOnMouseOut: false,    // if clock should start on MouseOut
       startClockOnMouseOutAfter: 1000,  // how long after MouseOut should the timer start again
-      directionalNav: false,         // manual advancing directional navs
+      directionalNav: true,         // manual advancing directional navs
       directionalNavRightText: 'Right', // text of right directional element for accessibility
       directionalNavLeftText: 'Left', // text of left directional element for accessibility
-      captions: true,           // do you want captions?
+      captions: false,           // do you want captions?
       captionAnimation: 'none',       // fade, slideOpen, none
       captionAnimationSpeed: 600,     // if so how quickly should they animate in
       resetTimerOnClick: false,      // true resets the timer instead of pausing slideshow progress on manual navigation
-      bullets: true,           // true or false to activate the bullet navigation
+      bullets: false,           // true or false to activate the bullet navigation
       bulletThumbs: true,        // thumbnails for the bullets
-      bulletThumbLocation: '../uploads/2014/01',      // location from this file where thumbs will be
+      bulletThumbLocation: '../wp_content/uploads/',      // location from this file where thumbs will be
       afterSlideChange: $.noop,   // empty function
       afterLoadComplete: $.noop, //callback to execute after everything has been loaded
       fluid: true,
-      centerBullets: false    // center bullet nav with js, turn this off if you want to position the bullet nav manually
+      centerBullets: true    // center bullet nav with js, turn this off if you want to position the bullet nav manually
     },
 
     activeSlide: 0,
     numberSlides: 0,
     orbitWidth: null,
-    orbitHeight: null,
+    orbitHeight: 700,
     locked: null,
     timerRunning: null,
     degrees: 0,

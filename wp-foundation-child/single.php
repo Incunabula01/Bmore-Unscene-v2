@@ -1,8 +1,8 @@
-<?php get_header(); ?>
+<?php get_header();?>
 			
 			<div id="content" class="clearfix">
 			
-				<div id="main" class="nine columns" role="main">
+				<div id="main" class="twelve columns" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -18,32 +18,38 @@
    								}
 							?>
 							
-							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+							<div class="wrapper">
+								<div class="eight columns waypoint" data-animate-down="bm-header" data-animate-up="bm-header">
+									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+									
+									<p class="meta">
+										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
+											<?php the_time('F jS, Y'); ?>
+										</time> 
+											<?php _e("by"); ?>
+											<?php the_author_posts_link(); ?>
+									</p>
+								</div>
+								<?php get_sidebar(); // sidebar 1 ?>
+							</div>
 							
-							<p class="meta">
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate>
-									<?php the_time('F jS, Y'); ?>
-								</time> 
-									<?php _e("by"); ?>
-									<?php the_author_posts_link(); ?>
-							</p>
-						
+							<span class="waypoint" data-animate-up="bm-header" data-animate-down="bm-header-small"></span> 
+
 						</header> <!-- end article header -->
 					
-						<section class="post_content nine columns">
-							<?php the_content(); ?>
-							
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
-							
-						</footer> <!-- end article footer -->
-						
-						<?php comments_template('bones_comments'); ?>
+						<div class="wrapper">
+							<section class="post_content seven columns">
 
+										<?php the_content(); ?>
+										<?php comments_template('bones_comments'); ?>
+						
+							</section> <!-- end article section -->
+							<footer>
+			
+								<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
+							
+							</footer> <!-- end article footer -->
+						</div>
 					</article> <!-- end article -->
 										
 					<?php endwhile; ?>			
@@ -64,8 +70,7 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
+
     
 			</div> <!-- end #content -->
 

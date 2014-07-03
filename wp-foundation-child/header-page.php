@@ -43,15 +43,14 @@
 		<!-- end of wordpress head -->
 
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-
 				
 	</head>
 	
 	<body <?php body_class(); ?>>
 
 		<div class="row container">
-			
-				<header role="banner" id="top-header" class="bu-header">
+			<div class="twelve columns">
+				<header role="banner" id="top-header" class="bu-header-page">
 					<div class="wrapper">
 							
 								<?php bones_main_nav(right); // Adjust using Menus in Wordpress Admin ?>
@@ -79,7 +78,7 @@
 										</h4>
 								</div>
 							</div>
-							
 					</div>
 				</header> <!-- end header -->
-							
+			</div>	
+				

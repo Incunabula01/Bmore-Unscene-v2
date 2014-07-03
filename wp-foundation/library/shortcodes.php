@@ -5,7 +5,7 @@
 // Gallery shortcode
 
 // remove the standard shortcode
-remove_shortcode('gallery', 'gallery_shortcode');
+/* /remove_shortcode('gallery', 'gallery_shortcode');
 add_shortcode('gallery', 'gallery_shortcode_tbs');
 
 function gallery_shortcode_tbs($attr) {
@@ -25,9 +25,7 @@ function gallery_shortcode_tbs($attr) {
 	}
 
 	return $output;
-}
-
-
+}*/
 
 // Buttons
 function buttons( $atts, $content = null ) {

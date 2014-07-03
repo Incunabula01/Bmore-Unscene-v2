@@ -6,13 +6,32 @@
 	background-color: none
 	border-bottom: 0.025em solid $dark-grey
 	bottom: 0.25em
+	padding: 0 0.1em
 
 // Animations
 =Button-Transition
 	-webkit-transition: background-color 0.50s ease-in-out
+	-webkit-transform-style: preserve-3d
+	-webkit-backface-visibility: hidden
 	-moz-transition: background-color 0.50s ease-in-out
 	-o-transition: background-color 0.50s ease-in-out
 	transition: background-color 0.50s ease-in-out
+
+=Header-Transition
+	-webkit-transition: margin 0.2s ease-out
+	-webkit-transform-style: preserve-3d
+	-webkit-backface-visibility: hidden
+	-moz-transition: margin 0.2s ease-out
+	-o-transition: margin 0.2s ease-out
+	transition: margin 0.2s ease-out
+
+=Mobile-Nav-Transition
+	-webkit-transform-style: preserve-3d
+	-webkit-backface-visibility: hidden
+	-webkit-transition: all 0.25s ease-in 0.2s
+	-moz-transition: all 0.25s ease-in 0.2s
+	-o-transition: all 0.25s ease-in 0.2s
+	-transition: all 0.25s ease-in 0.2s
 
 // Remove Styles
 =Remove-Box-Shadow

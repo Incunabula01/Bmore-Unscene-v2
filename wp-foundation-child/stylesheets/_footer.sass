@@ -1,42 +1,40 @@
 #site-footer
-	height: 10em
+	height: 100%
 	width: 100%
 	background-color: $base-color
 	clear: both
 
-.footer-links
+.footer-menu
 	font-size: 100%
-	ul.link-list
-		margin: 1em 0.5em
+	.widgettitle
+		color: $off-white
+	ul
+		margin: 1em 0
 		display: block
-		vertical-align: top
-		li
-			border-right: $box-border
-			padding: 0 1em
-			margin-left: 0em
-		li:last-child
-			border-right: 0em
+		list-style: none
 		label
 			display: none
 		a
 			color: $anchor-color
-			+Button-Transition
 		a:hover
+			color: $link-color
+			+Button-Transition
+		a:active
 			color: $white
 
 ul.social-media-icons
 	list-style: none
 	text-decoration: none
-	margin: 1em 2em
-	float: right
+	float: left
 	li
 		margin-right: 2em
 		display: inline-block
-		margin-left: 1em
 		a
 			color: $anchor-color
-			+Button-Transition
 		a:hover
+			color: $link-color
+			+Button-Transition
+		a:active
 			color: $white
 
 .mobile-footer
@@ -48,6 +46,6 @@ ul.social-media-icons
 	font-size: 0.5em
 	color: $off-white
 	background: none
-	margin-right: 4em
+	float: left
 	a
 		color: $off-white

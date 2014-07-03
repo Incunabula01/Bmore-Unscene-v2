@@ -3,86 +3,129 @@
 @media screen and (max-width: 767px)
 	.row
 		width: auto
+		padding: 0em
+
+	.columns
+		padding: 0px
+
+	.wrapper
+		width: 100%
 
 	article
 		padding-left: 0em
 
+	#top-header-page
+		background-color: $base-color
+		min-width: 100%
+		max-height: 3.6em
+		border: 0em
+		top: 0px
+		left: 0px
+
 	#top-header
 		min-width: 100%
-		max-height: 3.5em
-		z-index: 1004
-		#main-logo
-			background: none
-			width: 100%
-			min-height: 50px
-			padding: 0.2em 3em 
-			#logo-icon
-				display: none 
-			h1
-				text-align: center
-				font-weight: 300
-				font-size: 1.8em
-				letter-spacing: -0.020em
-				padding-left: 0px
-				#logo
-					color: $header-text
-			h4.subhead 
-				display: none
-		.active
-			border-color: $background
+		max-height: 3.6em
+		background-color: $base-color
+		border: 0em
+		top: 0px
+		left: 0px
+
+	#main-logo
+		background: none
+		width: 100%
+		min-height: 50px
+		padding: 0.2em 3em 
+		.logo-icon
+			display: none 
+		h1
+			text-align: center
+			font-weight: 300
+			font-size: 1.8em
+			letter-spacing: -0.020em
+			padding-left: 0px
+			#logo
+				color: $header-text
+		h4.subhead 
+			display: none
+
+	.active
+		border-color: $base-color
+		border: 0em
+	.active:hover
+		background-color: $background
 		
-		.icon-reorder
-			font-size: 1.4em
-			font-color: $off-white
-		.button
-			margin: 0.5em
-			font-size: 1em
-			border: none
-			background-color: $base-color
-			color: $off-white
-			box-shadow: none
-			background: none
-		.button:hover
-			border: none
-			color: $off-white
-			background-color: $dark-grey
-			color: $white
-		.button:active
-			border: none
-			color: $off-white
-			background-color: $darker-grey
-			box-shadow: none
+	.icon-reorder
+		font-size: 1.4em
+		font-color: $off-white
+
+	.stuck
+		.menu-action
+			z-index: 2000
+
+	.button
+		margin: 0.5em
+		font-size: 1em
+		border: 0rem
+		background-color: $base-color
+		color: $off-white
+		box-shadow: none
+	.button:hover
+		border: 0rem
+		color: $off-white
+		background-color: $dark-grey
+		color: $white
+	.button:active
+		border: 0em
+		color: $off-white
+		background-color: $darker-grey
+		box-shadow: none
 
 	.mobile-nav-container
-		top: 3.5em
+		top: 3.6em
 		width: 55%
 		background-color: $mobile-nav
 		color: $off-white
-		-webkit-transition: all 0.25s ease-in 0s
 		height: 100%
 		+Remove-Box-Shadow
+		+Mobile-Nav-Transition
 		ul.tabs.vertical
 			margin-bottom: 0px
+			li:hover
+				background: darken($darker-grey, 10%)
+				color: $white
+				+Button-Transition
+			li:first-child
+				border-top: $box-shadow
+			li:last-child
+				padding: 0em
 			li
 				border: $box-border
+				border-right: 0em
+				border-left: 0em
 				+Remove-Box-Shadow
 				background: $mobile-nav
+				height: 50px
+				padding: 1.2em 1em 
+				text-align: left
 				a
 					border-right: 0px
 					font-size: 16px
 					color: $off-white
-					background: 0 no-repeat $mobile-nav
 					+Remove-Box-Shadow
-					+Button-Transition
+					background: none
+					border: 0em
+					text-align: left
+					margin-top: -1.9em
 				a:hover
-					background: lighten($base-color, 10%)
+					+Button-Transition
 					color: $white
 				a:active
 					background: $mobile-nav
 				label
-					margin: 5px 15px
-					height: 44px
-					border-top: $box-border
+					margin: 0 14px
+					height: 46px
+					form
+						margin: 0.1em 0
 					.screen-reader-text
 						clip: rect(1px,1px,1px,1px)
 						position: absolute !important
@@ -93,6 +136,7 @@
 						position: relative
 						border: none
 						cursor: pointer
+						margin: 0em
 					#search-submit
 						display: none
 					
@@ -105,18 +149,15 @@
 
 	#content
 		background: $mobile-nav
-		margin: 0 4px
 
 	.active #main
-		margin-right: -95%
 		border-left: $box-shadow
 	#main
-		height: 100%
+		max-width: 400px
 		position: relative
 		background: $background
-		z-index: 1002
-		-webkit-transition: all 0.25s ease-in 0s
-		padding: 0px
+		border-left: $box-shadow($background)
+		+Mobile-Nav-Transition
 		.home-main
 			padding-left: 5px
 			.post-image
@@ -126,26 +167,29 @@
 			.post
 				h2
 					margin: 0.4em 0.3em
-					overflow: hidden
+					overflow-y: hidden
 				p
+					max-height: 126px
 					padding: 0 1em
-					overflow: hidden
+					overflow-y: hidden
 				.button
 					width: 100%
+					height: auto
 					text-align: center
 
 	.page-header
 		max-height: 400px
 
 	article
-		img
-			margin-top: 0.9em
-			padding: 0 1em
-			max-height: 200px
 		h1
 			margin: 0.4em 0.3em
 		p
 			padding: 0 1em
+
+	.attachment-wpf-home-featured
+		min-width: 100%
+		margin-top: 0.9em
+		padding: 0 1em
 
 	.panel
 		display: none
@@ -156,15 +200,22 @@
 		background: none
 		padding-top: 0em
 
-	#site-footer
-		height: 100%
-
 	.mobile-footer
 		display: block
 		text-align: center
 		min-height: 7em
 		h5
 			margin: 0.2em 0
+		.footer-menu
+			margin: 0 auto
+			.widgettitle
+				text-align: center
+				border-bottom: $box-border
+			li
+				text-align: center
+				margin: 0.5em 0
+				a
+					font-size: 120%
 		.mobile-social-media-icons
 			list-style: none
 			text-decoration: none
@@ -201,13 +252,30 @@
 	.post_content
 		padding-left: 0em
 
+	.archive_title
+		font-size: 1.5em
+		text-align: center
+
+	.h2
+		text-align: center
+
+	.grid-sizer
+		width: 50%
+		height: auto
+
+
 
 /* Tablet to Screen */
 
-@media screen and (min-width:767) and (max-width: 1023)
+@media (min-width:767) and (max-width: 1023)
+	.wrapper
+		padding: 0 1em
+
 	#top-header
+		width: 100%
 		#main-logo
 			width: 200px
+			padding: 2em 0 2em 0.5em
 			h1
 				font-size: 1em
 				font-weight: 100
@@ -217,6 +285,10 @@
 	article
 		img
 			max-height: 400px
+
+	.archive_title
+		font-size: 1.5em
+
 
 		
 		

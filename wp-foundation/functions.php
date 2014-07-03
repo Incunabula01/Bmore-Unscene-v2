@@ -36,8 +36,10 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 add_image_size( 'wpf-thumb-640', 640, 150, true );
 add_image_size( 'wpf-featured', 639, 300, true );
 add_image_size( 'wpf-home-featured', 1300, 900, true);
-add_image_size( 'bones-thumb-600', 600, 200, true );
+add_image_size( 'wpf-gallery', 300 );
+add_image_size( 'bones-thumb-600', 600, 200, false);
 add_image_size( 'bones-thumb-300', 300, 150, true );
+add_image_size( 'bullet-thumb-100', 100, 100, true );
 
 /* 
 to add more sizes, simply copy a line from above 
@@ -83,6 +85,23 @@ function bones_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
+    register_sidebar( array(
+        'name' => 'footer-sidebar-1',
+        'id' => 'footer1',
+        'before_widget' => '<div class="footer-menu">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'footer-sidebar-2',
+        'id' => 'footer2',
+        'before_widget' => '<div class="footer-menu">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ) );
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
@@ -131,7 +150,7 @@ if( $test_url !== false ) { // test if the URL exists
 
     function load_local_jQuery() {  
         wp_deregister_script('jquery'); // initiate the function  
-        wp_register_script('jquery', bloginfo('template_uri').'/javascripts/jquery.min.js', __FILE__, false, '1.7.2', true); // register the local file  
+        wp_register_script('jquery', bloginfo('template_uri').'../javascripts/jquery.min.js', __FILE__, false, '1.7.2', true); // register the local file  
         wp_enqueue_script('jquery'); // enqueue the local file  
     }  
 
@@ -171,6 +190,40 @@ function wp_foundation_js(){
 }
 
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
+
+function imageLoaded_js() {
+wp_register_script('imageLoaded_js', get_stylesheet_directory_uri() . '/javascripts/imagesloaded.pkgd.min.js', 'jQuery','1.1', true);
+wp_enqueue_script('imageLoaded_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'imageLoaded_js' );  
+
+function jqueryWayPoints_js() {
+wp_register_script('jqueryWayPoints_js', get_stylesheet_directory_uri() . '/javascripts/waypoints.min.js', 'jQuery' , '1.1', true);
+wp_enqueue_script('jqueryWayPoints_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'jqueryWayPoints_js' ); 
+
+function stickyWayPoints_js() {
+wp_register_script('stickyWayPoints_js', get_stylesheet_directory_uri() . '/javascripts/waypoints-sticky.min.js', 'jQuery' , '1.1', true);
+wp_enqueue_script('stickyWayPoints_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'stickyWayPoints_js' ); 
+
+
+if (! function_exists('slug_scripts_masonry') ) :
+if ( ! is_admin() ) :
+
+function slug_scripts_masonry() {
+    wp_enqueue_script('masonry');
+    wp_enqueue_style('masonry’, get_template_directory_uri().'/css/’);
+}
+add_action( 'wp_enqueue_scripts', 'slug_scripts_masonry' );
+endif; //! is_admin()
+endif; //! slug_scripts_masonry exists 
+
 
 /************* COMMENT LAYOUT *********************/
 		
@@ -234,7 +287,7 @@ add_filter('comment_class', 'add_class_comments');
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
     <span class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</span>
-    <input type="search" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." />
+    <input type="text" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." />
     <input type="submit" id="search-submit" value="'. esc_attr__('Search') .'" />
     </form>';
     return $form;
@@ -348,14 +401,17 @@ function custom_wp_nav_menu($var) {
                 'first',
                 'last',
                 'vertical',
-                'horizontal'
+                'horizontal',
+                'icon-star',
+                'icon-calendar',
+                'icon-archive',
+                'icon-2x'
                 )
         ) : '';
 }
 add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
 add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
-add_filter('page_css_class', 'custom_wp_nav_menu');
- 
+add_filter('page_css_class', 'custom_wp_nav_menu'); 
 //Replaces "current-menu-item" with "active"
 function current_to_active($text){
         $replace = array(
@@ -601,4 +657,9 @@ function content($limit) {
   $content = str_replace(']]>', ']]&gt;', $content);
   return $content;
 }
+
+function remove_gallery_css( $css ) {
+    return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
+}
+add_filter( 'gallery_style', 'remove_gallery_css' );
 ?>

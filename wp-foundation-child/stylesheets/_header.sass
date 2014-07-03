@@ -1,95 +1,157 @@
+.bu-header-page
+	background-color: $base-color
+	color: $header-text
+	width: 100%
+	z-index: 2000
+	top: 0
+	left: 0
+	position: relative
+	
+.bu-header
+	background-color: $transparency
+	color: $header-text
+	top: 0
+	left: 0
+	width: 100%
+	display: block
+	position: relative
+	z-index: 2000
 
-#top-header
-  background-color: $base-color
-  color: $header-text
-  max-height: 11em
-  #main-logo
-    display: block
-    padding: 4em 0 1.5em 1.5em
-    #logo-icon
-      background: $base-color url('images/BmoreUnsceneLogo.png') no-repeat 
-      height: 75px
-      width: 75px
-      display: block
-      float: left
-      +Button-Transition
-    #logo-icon:hover
-      opacity: 0.8
-    h1
-      font-size: 2em
-      font-weight: 100
-      padding-left: 3em
-      margin-top: 10px
-      margin-bottom: 1px
-      #logo
-        color: $header-text
-    h4.subhead
-      color: $off-white
-      padding-left: 3.6em
-      font-weight: 100
-      margin-top: 0px
-      margin-bottom: 0px
-
-  .active
-    background: $dark-grey
-    border-color: $base-color
-  .active:hover
-    background: darken($base-color, 20%)      
-      
-
-ul.nav-bar
-  background: $base-color
-  margin-top: 5.5em
-  height: 2em
-  li
-    border-color: $base-color
-    border-width: 0em
-    box-shadow: none
-    +Button-Transition
-    a
-      border-left: 0.1rem solid $white
-      border-right: 0em
-      color: $anchor-color
-    a:first-child
-      font-size: 1.2em
-      padding: 0 15px
-    a:last-child
-      border-right: 0.1rem solid $white
-    a:last-child:hover
-      border-right: 0.1rem solid $white
-    a:hover
-      background: darken($base-color, 25%)
-    a:focus
-      background: $dark-grey
-
-    label
-      margin: 0 15px
-      height: 37px
-      .screen-reader-text
-        clip: rect(1px,1px,1px,1px)
-        position: absolute !important
-      .search-field
-        background: transparent url('images/search-icon.png') 0 0 no-repeat
-        height: 38px
-        padding-left: 36px
-        position: relative
-        transition: width 400ms ease, background 400ms ease
-        -webkit-transition: width 400ms ease, background 400ms ease
-        -moz-transition: width 400ms ease, background 400ms ease
-        -o-transition: width 400ms ease, background 400ms ease
-        width: 0px
-        border: none
-        cursor: pointer
-        border-image-width: 0px
-        +Remove-Box-Shadow
-      .search-field:focus
-        background: $white url('images/search-icon.png') -38px 0 no-repeat
-        width: 150px
-        border: none
-      #search-submit
-        display: none
-
-      
+.stuck
+	background-color: $transparency
+	box-shadow: $nav-box-shadow
+	position: fixed
+	max-height: 66px
+	#main-logo
+		padding: 0.5em 0 0 0.5em
+		+Header-Transition
+		.logo-icon
+			background: none
+			height: 0px
+			width: 0px
+			display: none
+			+Header-Transition
+		h1
+			margin: 0em
+			font-size: 2em
+			padding-left: 0em
+			+Header-Transition
+		h4.subhead
+			padding-left: 0em
+			+Header-Transition
+	.nav-bar
+		z-index: 3000
+		position: relative
+		margin-top: 1em
+		+Header-Transition
+		li:hover
+			color: $anchor-color
+			+Button-Transition
 
 
-        
+
+#main-logo
+	display: block
+	padding: 2em 0.5em
+	.logo-icon
+		background: transparent url('images/BmoreUnsceneLogo.png') no-repeat 
+		height: 75px
+		width: 75px
+		display: block
+		float: left
+	.logo-icon:hover
+		opacity: 0.7
+		+Button-Transition
+	h1
+		font-size: 2em
+		font-weight: 100
+		padding-left: 3em
+		margin-top: 10px
+		margin-bottom: 1px
+		height: 100%
+		#logo
+			color: $header-text
+	h4.subhead
+		color: $white
+		padding-left: 3.6em
+		font-weight: 100
+		margin-top: 0px
+		margin-bottom: 0px
+		height: 100%
+
+.active
+	background: $dark-grey
+	border: 0.1em solid $off-white
+.active:hover
+	background-color: $darker-grey     
+			
+
+.nav-bar
+	margin-top: 3.5em
+	height: 4em
+	background: transparent
+	li:last-child
+		border-right: none
+		border: none
+	li.active
+		background: $darker-grey
+		border-color: $darker-grey
+	li.active:hover
+		background: darken($link-color, 15%)
+	li:hover
+		background-color: darken($darker-grey, 15%)
+	li:focus
+		background-color: darken($darker-grey, 25%)
+	li
+		padding: 0 1em
+		border: 0.1em solid $dark-grey
+		margin-right: 0.5em
+		+Remove-Box-Shadow
+		background-color: $dark-grey
+		a
+			color: $anchor-color
+			font-size: 1.2em
+			float: right
+
+		a:first-child
+			padding: 0 0.5em
+		a:hover
+			color: $white
+			+Button-Transition
+
+		label
+			margin: 0px
+			height: 40px
+			border: 0em
+			.screen-reader-text
+				clip: rect(1px,1px,1px,1px)
+				position: absolute !important
+			.search-field
+				background: transparent url('images/search-icon.png') 0 0 no-repeat
+				height: 38px
+				padding-left: 36px
+				position: relative
+				transition: width 400ms ease, background 400ms ease
+				-webkit-transition: width 400ms ease, background 400ms ease
+				-webkit-backface-visibility: hidden
+				-webkit-transform-style: preserve-3d
+				-moz-transition: width 400ms ease, background 400ms ease
+				-o-transition: width 400ms ease, background 400ms ease
+				width: 0px
+				border: 0em
+				cursor: pointer
+				border-image-width: 0px
+				+Remove-Box-Shadow
+			.search-field:focus
+				background: $white url('images/search-icon.png') -38px 0 no-repeat
+				width: 150px
+				border: 0em
+			.search-field:hover
+				border: 0em
+			#search-submit
+				display: none
+				padding: 0px
+
+	
+
+
