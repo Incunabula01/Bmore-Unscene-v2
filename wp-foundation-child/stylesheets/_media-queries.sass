@@ -150,10 +150,12 @@
 	#content
 		background: $mobile-nav
 
-	.active #main
-		border-left: $box-shadow
+	.active 
+		#main
+			border-left: $box-shadow
+
 	#main
-		max-width: 400px
+		width: 100%
 		position: relative
 		background: $background
 		border-left: $box-shadow($background)
@@ -164,14 +166,13 @@
 				img
 					margin-top: 0.8em
 					border: none
+					max-height: 300px
 			.post
 				h2
 					margin: 0.4em 0.3em
-					overflow-y: hidden
 				p
 					max-height: 126px
 					padding: 0 1em
-					overflow-y: hidden
 				.button
 					width: 100%
 					height: auto
@@ -187,9 +188,10 @@
 			padding: 0 1em
 
 	.attachment-wpf-home-featured
-		min-width: 100%
+		width: 100%
 		margin-top: 0.9em
 		padding: 0 1em
+		max-height: 250px
 
 	.panel
 		display: none

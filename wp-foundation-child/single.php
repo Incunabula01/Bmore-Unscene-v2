@@ -19,7 +19,7 @@
 							?>
 							
 							<div class="wrapper">
-								<div class="eight columns waypoint" data-animate-down="bm-header" data-animate-up="bm-header">
+								<div class="eight columns">
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
 									<p class="meta">
@@ -33,7 +33,6 @@
 								<?php get_sidebar(); // sidebar 1 ?>
 							</div>
 							
-							<span class="waypoint" data-animate-up="bm-header" data-animate-down="bm-header-small"></span> 
 
 						</header> <!-- end article header -->
 					

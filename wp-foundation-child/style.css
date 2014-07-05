@@ -142,12 +142,12 @@ p {
 }
 .stuck .nav-bar li:hover {
   color: #bfbfbf;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 
 #main-logo {
@@ -162,13 +162,13 @@ p {
   float: left;
 }
 #main-logo .logo-icon:hover {
-  opacity: 0.7;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.5s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 #main-logo h1 {
   font-size: 2em;
@@ -192,7 +192,7 @@ p {
 
 .active {
   background: #6d6d6d;
-  border: 0.1em solid #cfcfcf;
+  border: 0.1em solid #e6e6e6;
 }
 
 .active:hover {
@@ -205,8 +205,12 @@ p {
   background: transparent;
 }
 .nav-bar li:last-child {
-  border-right: none;
-  border: none;
+  border-right: 0em;
+  border: 0em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 .nav-bar li.active {
   background: #2d2d2d;
@@ -229,7 +233,7 @@ p {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
-  background-color: #6d6d6d;
+  background-color: #535353;
 }
 .nav-bar li a {
   color: #bfbfbf;
@@ -241,12 +245,12 @@ p {
 }
 .nav-bar li a:hover {
   color: white;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 .nav-bar li label {
   margin: 0px;
@@ -301,7 +305,7 @@ p {
   font-size: 100%;
 }
 .footer-menu .widgettitle {
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 .footer-menu ul {
   margin: 1em 0;
@@ -316,12 +320,12 @@ p {
 }
 .footer-menu ul a:hover {
   color: #c71100;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 .footer-menu ul a:active {
   color: white;
@@ -341,12 +345,12 @@ ul.social-media-icons li a {
 }
 ul.social-media-icons li a:hover {
   color: #c71100;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 ul.social-media-icons li a:active {
   color: white;
@@ -361,12 +365,12 @@ ul.social-media-icons li a:active {
 
 .attribution {
   font-size: 0.5em;
-  color: #cfcfcf;
+  color: #e6e6e6;
   background: none;
   float: left;
 }
 .attribution a {
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 
 .caption-container {
@@ -385,7 +389,7 @@ ul.social-media-icons li a:active {
   max-height: 45em;
   opacity: 1;
   margin-top: -9em;
-  background: url(spinner.gif) center center #f4f4f4 no-repeat;
+  background: #f4f4f4 url("spinner.gif") no-repeat center center;
 }
 #featured img {
   display: none;
@@ -401,7 +405,7 @@ ul.social-media-icons li a:active {
 #featured p {
   width: 90%;
   padding-left: 1.5em;
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 #featured .orbit {
   background: none;
@@ -428,12 +432,12 @@ ul.orbit-bullets li.has-thumb {
 }
 ul.orbit-bullets li:hover {
   opacity: 0.5;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 
 .post-image {
@@ -484,7 +488,7 @@ ul.orbit-bullets li:hover {
   margin: 1em 0 1.6em 1em;
 }
 #sidebar1 .panel .widget {
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 #sidebar1 .panel .widget h4 {
   margin-bottom: 7px;
@@ -508,6 +512,12 @@ ul.orbit-bullets li:hover {
 }
 #sidebar1 .panel .widget .radius {
   border-radius: 0px;
+}
+#sidebar1 .panel .avatar {
+  border-radius: 100px;
+}
+#sidebar1 .panel a:hover {
+  color: #c71100;
 }
 
 .error-image {
@@ -565,13 +575,13 @@ div.panel.callout a:hover {
 }
 div.panel.callout .button {
   background: #8b8b8b;
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
-  color: #cfcfcf;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
+  color: #e6e6e6;
 }
 div.panel.callout .button:hover {
   background: #6d6d6d;
@@ -619,12 +629,12 @@ p {
 }
 .gallery-item a:hover {
   background-color: rgba(145, 145, 145, 0.7);
-  -webkit-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.8s ease-in;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.8s ease-in;
+  -o-transition: background-color 0.8s ease-in;
+  transition: background-color 0.8s ease-in;
 }
 .gallery-item a:active {
   background-color: rgba(81, 81, 81, 0.7);
@@ -701,7 +711,7 @@ p {
 
   .icon-reorder {
     font-size: 1.4em;
-    font-color: #cfcfcf;
+    font-color: #e6e6e6;
   }
 
   .stuck .menu-action {
@@ -713,20 +723,20 @@ p {
     font-size: 1em;
     border: 0rem;
     background-color: #8b8b8b;
-    color: #cfcfcf;
+    color: #e6e6e6;
     box-shadow: none;
   }
 
   .button:hover {
     border: 0rem;
-    color: #cfcfcf;
+    color: #e6e6e6;
     background-color: #6d6d6d;
     color: white;
   }
 
   .button:active {
     border: 0em;
-    color: #cfcfcf;
+    color: #e6e6e6;
     background-color: #2d2d2d;
     box-shadow: none;
   }
@@ -735,7 +745,7 @@ p {
     top: 3.6em;
     width: 55%;
     background-color: #656565;
-    color: #cfcfcf;
+    color: #e6e6e6;
     height: 100%;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -754,12 +764,12 @@ p {
   .mobile-nav-container ul.tabs.vertical li:hover {
     background: #141414;
     color: white;
-    -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.8s ease-in;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
-    -moz-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in;
+    -o-transition: background-color 0.8s ease-in;
+    transition: background-color 0.8s ease-in;
   }
   .mobile-nav-container ul.tabs.vertical li:first-child {
     border-top: 0.3em solid #2d2d2d;
@@ -783,7 +793,7 @@ p {
   .mobile-nav-container ul.tabs.vertical li a {
     border-right: 0px;
     font-size: 16px;
-    color: #cfcfcf;
+    color: #e6e6e6;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -o-box-shadow: none;
@@ -794,12 +804,12 @@ p {
     margin-top: -1.9em;
   }
   .mobile-nav-container ul.tabs.vertical li a:hover {
-    -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.8s ease-in;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
-    -moz-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in;
+    -o-transition: background-color 0.8s ease-in;
+    transition: background-color 0.8s ease-in;
     color: white;
   }
   .mobile-nav-container ul.tabs.vertical li a:active {
@@ -848,7 +858,7 @@ p {
   }
 
   #main {
-    max-width: 400px;
+    width: 100%;
     position: relative;
     background: #f0f0f0;
     border-left: 0.3em solid #2d2d2d #f0f0f0;
@@ -865,15 +875,14 @@ p {
   #main .home-main .post-image img {
     margin-top: 0.8em;
     border: none;
+    max-height: 300px;
   }
   #main .home-main .post h2 {
     margin: 0.4em 0.3em;
-    overflow-y: hidden;
   }
   #main .home-main .post p {
     max-height: 126px;
     padding: 0 1em;
-    overflow-y: hidden;
   }
   #main .home-main .post .button {
     width: 100%;
@@ -893,9 +902,10 @@ p {
   }
 
   .attachment-wpf-home-featured {
-    min-width: 100%;
+    width: 100%;
     margin-top: 0.9em;
     padding: 0 1em;
+    max-height: 250px;
   }
 
   .panel {
@@ -947,12 +957,12 @@ p {
   }
   .mobile-footer .mobile-social-media-icons li a {
     color: #bfbfbf;
-    -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.8s ease-in;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
-    -moz-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in;
+    -o-transition: background-color 0.8s ease-in;
+    transition: background-color 0.8s ease-in;
   }
   .mobile-footer .mobile-social-media-icons li a:hover {
     color: white;
@@ -1052,7 +1062,7 @@ body {
 }
 
 .columns {
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .container {
