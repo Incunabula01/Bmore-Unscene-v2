@@ -9,32 +9,32 @@
 			<div id="content" class="clearfix">
 			
 				<div class="wrapper">
-					<div id="main" class="eight columns clearfix" role="main">
-					
+					<div id="main" class="nine columns clearfix" role="main">
+							</br>
 							<?php if (is_category()) { ?>
-								<h1 class="archive_title h2">
+								<h2 class="archive_title h2">
 									<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
-								</h1>
+								</h2>
 							<?php } elseif (is_tag()) { ?> 
-								<h1 class="archive_title h2">
+								<h2 class="archive_title h2">
 									<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
-								</h1>
+								</h2>
 							<?php } elseif (is_author()) { ?>
-								<h1 class="archive_title h2">
+								<h2 class="archive_title h2">
 									<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
-								</h1>
+								</h2>
 							<?php } elseif (is_day()) { ?>
-								<h1 class="archive_title h2">
+								<h2 class="archive_title h2">
 									<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
-								</h1>
+								</h2>
 							<?php } elseif (is_month()) { ?>
-							    <h1 class="archive_title h2">
+							    <h2 class="archive_title h2">
 							    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
-							    </h1>
+							    </h2>
 							<?php } elseif (is_year()) { ?>
-							    <h1 class="archive_title h2">
+							    <h2 class="archive_title h2">
 							    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
-							    </h1>
+							    </h2>
 							<?php } ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -42,7 +42,7 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 								
 								<header>
-									
+									<br>
 									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									
 									<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
@@ -51,7 +51,7 @@
 							
 								<section class="post_content">
 								
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+									<?php the_post_thumbnail( 'wpf-gallery' ); ?>
 								
 									<?php the_excerpt(); ?>
 							
@@ -81,10 +81,10 @@
 									
 						
 						<?php else : ?>
-						
+							<br>
 							<article id="post-not-found">
 							    <header>
-							    	<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
+							    	<h2><?php _e("No Posts Yet", "bonestheme"); ?></h2>
 							    </header>
 							    <section class="post_content">
 							    	<p><?php _e("Sorry, What you were looking for is not here.", "bonestheme"); ?></p>
@@ -97,7 +97,7 @@
 				
 					</div> <!-- end #main -->
     
-					<?php get_sidebar(); // sidebar 1 ?>
+					<?php get_sidebar('footer-sidebar-1'); // sidebar 1 ?>
     			</div>
 
 			</div> <!-- end #content -->

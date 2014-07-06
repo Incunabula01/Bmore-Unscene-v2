@@ -1,4 +1,4 @@
-		<div class="twelve columns">
+
 			<footer id="site-footer" role="contentinfo">
 						<div class="row">
 							<div class="wrapper">
@@ -46,10 +46,7 @@
 								</nav>
 							</div>
 						</div>
-					
 			</footer> <!-- end footer -->
-
-		</div>
 		
 	</div> <!-- end #container -->
 		
@@ -69,9 +66,11 @@
    			 	});
 		</script>  
 		<script type="text/javascript">
-				$('#top-header').waypoint('sticky' , {
-					offset: -100
-				});
+				
+					$('#top-header').waypoint('sticky' , {
+						offset: -100
+					});
+		
 		</script>
 
 	</body>

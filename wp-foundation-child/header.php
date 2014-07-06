@@ -70,7 +70,7 @@
 										<div class="logo-icon"></div>
 									</a>
 									<a href="<?php echo get_bloginfo('url'); ?>" >
-										<h1>
+										<h1 class="header-text">
 											<?php bloginfo('name'); ?>
 										</h1>
 									</a>

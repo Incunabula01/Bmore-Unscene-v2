@@ -66,6 +66,11 @@ p
 
 .archive_title
 	+Post-Header
+.h2
+	padding: 0 0.1em
+	a:hover
+	a:active
+		color: $link-color
 
 #gallery-1
 	margin: 0 0.2em
@@ -75,9 +80,9 @@ p
 	length: 8em
 	img
 		margin-bottom: 0em
-	a:hover
-		background-color: $transparency
-		+Button-Transition
-	a:active
-		background-color: darken($transparency, 25%) 
+		a:hover
+			background-color: $transparency
+			+Button-Transition
+		a:active
+			background-color: darken($transparency, 25%) 
 

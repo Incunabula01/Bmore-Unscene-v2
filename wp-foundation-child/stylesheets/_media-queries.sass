@@ -11,20 +11,15 @@
 	.wrapper
 		width: 100%
 
+	h1,h2
+		font-size: 2.2em
+
 	article
 		padding-left: 0em
 
-	#top-header-page
-		background-color: $base-color
-		min-width: 100%
-		max-height: 3.6em
-		border: 0em
-		top: 0px
-		left: 0px
-
 	#top-header
-		min-width: 100%
-		max-height: 3.6em
+		width: 100%
+		max-height: 55px
 		background-color: $base-color
 		border: 0em
 		top: 0px
@@ -33,16 +28,17 @@
 	#main-logo
 		background: none
 		width: 100%
-		min-height: 50px
+		min-height: 55px
 		padding: 0.2em 3em 
 		.logo-icon
 			display: none 
-		h1
+		.header-text
 			text-align: center
 			font-weight: 300
-			font-size: 1.8em
+			font-size: 2em
 			letter-spacing: -0.020em
 			padding-left: 0px
+			margin: 4px 0 
 			#logo
 				color: $header-text
 		h4.subhead 
@@ -59,6 +55,10 @@
 		font-color: $off-white
 
 	.stuck
+		#main-logo
+			.header-text
+				margin: 4px 0
+				text-align: center
 		.menu-action
 			z-index: 2000
 
@@ -81,7 +81,7 @@
 		box-shadow: none
 
 	.mobile-nav-container
-		top: 3.6em
+		top: 3.9em
 		width: 55%
 		background-color: $mobile-nav
 		color: $off-white
@@ -156,6 +156,7 @@
 
 	#main
 		width: 100%
+		min-height: 50em
 		position: relative
 		background: $background
 		border-left: $box-shadow($background)
@@ -166,16 +167,21 @@
 				img
 					margin-top: 0.8em
 					border: none
+					width: 100%
 					max-height: 300px
 			.post
 				h2
-					margin: 0.4em 0.3em
+					+Post-Header
+					margin: 0.5em 0
+					text-align: center
+
 				p
-					max-height: 126px
+					min-height: 126px
 					padding: 0 1em
 				.button
 					width: 100%
 					height: auto
+					margin: 0 auto
 					text-align: center
 
 	.page-header
@@ -183,15 +189,23 @@
 
 	article
 		h1
-			margin: 0.4em 0.3em
+			text-align: center
+			margin: 0.5em 0
+			font-size: 2.5em
+		p.meta
+			text-align: center
 		p
-			padding: 0 1em
+			padding: 0 0.5em
+			
 
 	.attachment-wpf-home-featured
 		width: 100%
 		margin-top: 0.9em
 		padding: 0 1em
 		max-height: 250px
+
+	.attachment-wpf-gallery
+		width: 100%
 
 	.panel
 		display: none
@@ -205,7 +219,8 @@
 	.mobile-footer
 		display: block
 		text-align: center
-		min-height: 7em
+		min-height: 100%
+		background: $base-color
 		h5
 			margin: 0.2em 0
 		.footer-menu
@@ -248,8 +263,19 @@
 		.social-media-icons
 			display: none
 
+	.search-header
+		margin-top: 0px
+		padding: 0em
+		text-align: center
+		
 	.search-results-header
-		padding-left: 0.7em
+		@extend .search-header
+		a:active
+		a:hover
+			color: $link-color
+	p.meta
+		a:hover
+			color: $link-color
 
 	.post_content
 		padding-left: 0em
@@ -260,10 +286,6 @@
 
 	.h2
 		text-align: center
-
-	.grid-sizer
-		width: 50%
-		height: auto
 
 
 

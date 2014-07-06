@@ -49,7 +49,6 @@
 	<body <?php body_class(); ?>>
 
 		<div class="row container">
-			<div class="twelve columns">
 				<header role="banner" id="top-header" class="bu-header-page">
 					<div class="wrapper">
 							
@@ -69,7 +68,7 @@
 										<div class="logo-icon"></div>
 									</a>
 									<a href="<?php echo get_bloginfo('url'); ?>" >
-										<h1>
+										<h1 class="header-text">
 											<?php bloginfo('name'); ?>
 										</h1>
 									</a>
@@ -80,5 +79,5 @@
 							</div>
 					</div>
 				</header> <!-- end header -->
-			</div>	
+			
 				

@@ -42,7 +42,6 @@ Template Name: Archive Page
 						
 						</article> <!-- end article -->
 						
-						<?php comments_template(); ?>
 						
 						<?php endwhile; ?>	
 						
