@@ -22,10 +22,13 @@
 		top: 0px
 		left: 0px
 
-	#top-header
+	#mobile-header
 		min-width: 100%
 		max-height: 3.6em
 		background-color: $base-color
+		box-shadow: $nav-box-shadow
+		position: fixed
+		z-index: 9000
 		border: 0em
 		top: 0px
 		left: 0px
@@ -57,10 +60,6 @@
 	.icon-reorder
 		font-size: 1.4em
 		font-color: $off-white
-
-	.stuck
-		.menu-action
-			z-index: 2000
 
 	.button
 		margin: 0.5em
@@ -148,6 +147,7 @@
 				display: none
 
 	#content
+		margin-top: 3.6em
 		background: $mobile-nav
 
 	.active 
@@ -260,10 +260,6 @@
 
 	.h2
 		text-align: center
-
-	.grid-sizer
-		width: 50%
-		height: auto
 
 
 
